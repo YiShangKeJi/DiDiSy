@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/rectangle">
+
+    <RelativeLayout
+        android:layout_width="500px"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5px">
+
+        <TextView
+            android:id="@+id/tv_dialog_info"
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:paddingTop="30px"
+            android:text="您确定要退出吗?"
+            android:textColor="@color/blanktitle"
+            android:textSize="30px" />
+
+        <Button
+            android:id="@+id/bt_cancel_dialog"
+            android:layout_width="150px"
+            android:layout_height="80px"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tv_dialog_info"
+            android:layout_margin="40px"
+            android:background="@drawable/rectangle"
+            android:text="取消"
+            android:textColor="@color/blanktitle"
+            android:textSize="30px" />
+
+        <Button
+            android:id="@+id/bt_sure_dialog"
+            android:layout_width="150px"
+            android:layout_height="80px"
+            android:layout_below="@+id/tv_dialog_info"
+            android:layout_margin="40px"
+            android:background="@drawable/rectangle"
+            android:text="确定"
+            android:textColor="@color/blanktitle"
+            android:textSize="30px" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10px"
+            android:layout_below="@+id/bt_sure_dialog" />
+
+    </RelativeLayout>
+</RelativeLayout>

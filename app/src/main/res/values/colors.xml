@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorTheme">#8080c0</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="blanktitle">#323333</color>
+    <color name="progress_off">#f3ad03</color>
+    <color name="progress_on">#fda100</color>
+    <color name="light_blue">#663399CC</color>
+    <color name="bg_title">#58C5FE</color>
+    <color name="bg_color">#B0E2FF</color>
+    <color name="blue">#0000FF</color>
+    <color name="green">#00cd60</color>
+    <color name="touming">#00000000</color>
+    <color name="bantouming">#e0000000</color>
+    <color name="title">#f9c349</color>
+    <color name="gray">#eeeeee</color>
+    <color name="alert">#CC0000</color>
+    <color name="person">#8080c0</color>
+    <color name="confirm">#FF8800</color>
+    <color name="info">#669900</color>
+    <color name="custom">#0099CC</color>
+    <color name="zise">#8B7B8B</color>
+</resources>
