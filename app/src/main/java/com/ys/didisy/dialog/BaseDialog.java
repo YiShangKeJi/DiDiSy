@@ -1,6 +1,5 @@
 package com.ys.didisy.dialog;
 
-import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.view.Display;
@@ -11,20 +10,28 @@ import android.view.WindowManager;
 import com.ys.didisy.R;
 
 public class BaseDialog extends Dialog {
+    private static BaseDialog baseDialog;
 
     public BaseDialog(Context context) {
         super(context);
 
     }
 
-    public static  Dialog getDialog(Activity m_Context, int layout, int width, int height) {
+    public static BaseDialog getIntence(Context context) {
+        if (baseDialog == null) {
+            baseDialog = new BaseDialog(context);
+        }
+        return baseDialog;
+    }
+
+    public Dialog getDialog(Context m_Context, int layout, int width, int height) {
         // TODO Auto-generated constructor stub
         Dialog dialog = new Dialog(m_Context, R.style.dialog);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(layout);
         Window dialogWindow = dialog.getWindow();
         dialogWindow.setGravity(Gravity.CENTER_VERTICAL);
-        WindowManager manager = m_Context.getWindow().getWindowManager();
+        WindowManager manager = getWindow().getWindowManager();
         Display d = manager.getDefaultDisplay(); // 获取屏幕宽、高用
         WindowManager.LayoutParams p = dialogWindow.getAttributes(); // 获取对话框当前的参数值
         p.height = height;
