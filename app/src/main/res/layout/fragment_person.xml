@@ -28,7 +28,7 @@
 
             <TextView
                 android:id="@+id/tv_head"
-                style="@style/ty_title"
+                style="@style/text_title"
                 android:layout_width="@dimen/y100"
                 android:layout_height="@dimen/y100"
                 android:layout_gravity="center"
@@ -37,7 +37,7 @@
 
             <TextView
                 android:id="@+id/tv_phone"
-                style="@style/ty_title"
+                style="@style/text_title"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/y100"
                 android:gravity="center"
