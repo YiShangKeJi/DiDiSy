@@ -5,20 +5,68 @@
         <!-- Customize your theme here. -->
 
     </style>
-    <!-- 自定义 -->
-    <style name="text_small">
+    <!-- 自定义 TextView-->
+    <style name="text_12">
+        <item name="android:textColor">@color/zise</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="text_14">
         <item name="android:textColor">@color/zise</item>
         <item name="android:textSize">14sp</item>
         <item name="android:gravity">center</item>
     </style>
 
-    <style name="text_normal">
-        <item name="android:textColor">@color/white</item>
+    <style name="text_16">
+        <item name="android:textColor">@color/zise</item>
         <item name="android:textSize">16sp</item>
         <item name="android:gravity">center</item>
     </style>
 
-    <style name="ty_title">
+    <style name="text_18">
+        <item name="android:textColor">@color/zise</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="text_20">
+        <item name="android:textColor">@color/zise</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="text_22">
+        <item name="android:textColor">@color/zise</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="text_24">
+        <item name="android:textColor">@color/zise</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="text_26">
+        <item name="android:textColor">@color/zise</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="text_28">
+        <item name="android:textColor">@color/zise</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="text_30">
+        <item name="android:textColor">@color/zise</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="text_title">
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">18sp</item>
         <item name="android:gravity">center</item>

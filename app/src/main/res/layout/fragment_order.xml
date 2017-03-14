@@ -12,7 +12,7 @@
 
         <TextView
             android:id="@+id/textView2"
-            style="@style/text_normal"
+            style="@style/text_16"
             android:layout_width="@dimen/x100"
             android:layout_height="@dimen/y50"
             android:layout_centerVertical="true"
@@ -30,7 +30,7 @@
 
         <TextView
             android:id="@+id/textView3"
-            style="@style/ty_title"
+            style="@style/text_title"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_centerInParent="true"
@@ -41,7 +41,7 @@
     </RelativeLayout>
 
     <TextView
-        style="@style/text_small"
+        style="@style/text_14"
         android:layout_width="match_parent"
         android:layout_height="@dimen/y80"
         android:background="@color/gray"
@@ -62,28 +62,28 @@
             android:orientation="vertical">
 
             <TextView
-                style="@style/text_small"
+                style="@style/text_14"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/y250"
                 android:layout_margin="@dimen/x10"
                 android:background="@drawable/rectangle" />
 
             <TextView
-                style="@style/text_small"
+                style="@style/text_14"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/y250"
                 android:layout_margin="@dimen/x10"
                 android:background="@drawable/rectangle" />
 
             <TextView
-                style="@style/text_small"
+                style="@style/text_14"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/y250"
                 android:layout_margin="@dimen/x10"
                 android:background="@drawable/rectangle" />
 
             <TextView
-                style="@style/text_small"
+                style="@style/text_14"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/y250"
                 android:layout_margin="@dimen/x10"
