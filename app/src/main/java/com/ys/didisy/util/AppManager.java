@@ -9,7 +9,7 @@ import java.util.List;
  * 必须注册才能使用
  */
 public class AppManager extends Application {
-	private List<Activity> activities = new ArrayList<Activity>();
+	private  ArrayList<Activity> activities = new ArrayList<Activity>();
 	private static AppManager instance;
 
 	/**
@@ -33,5 +33,9 @@ public class AppManager extends Application {
 		}
 		System.exit(0);
 	}
-
+	/**
+	 * Activity关闭时，删除Activity列表中的Activity对象*/
+	public  void removeActivity(Activity a){
+		activities.remove(a);
+	}
 }

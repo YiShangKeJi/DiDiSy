@@ -14,18 +14,13 @@ import android.widget.TextView;
 
 import com.ys.didisy.R;
 import com.ys.didisy.adapter.TyViewPagerAdapter;
-import com.ys.didisy.viewpager.ManageAllPage;
-import com.ys.didisy.viewpager.ManageCancelPage;
-import com.ys.didisy.viewpager.ManageEvaluatePage;
-import com.ys.didisy.viewpager.ManageServicePage;
-
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * 订单管理
  */
-public class ManageFragment extends Fragment implements View.OnClickListener, ViewPager.OnPageChangeListener {
+public class ManageFragment extends Fragment implements View.OnClickListener{
     public View view;
     private Context context;
     private TextView tv_all;
@@ -35,7 +30,7 @@ public class ManageFragment extends Fragment implements View.OnClickListener, Vi
     //
     private ViewPager vp_manage;
     private TyViewPagerAdapter adapter;
-    private List<View> mViewList;
+    public List<Fragment> fragments = new ArrayList<Fragment>();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -48,17 +43,16 @@ public class ManageFragment extends Fragment implements View.OnClickListener, Vi
     }
 
     private void setDefault() {
-        mViewList = new ArrayList<>();
         setBottomDrawable(tv_all);
-        ManageAllPage manageAllPage = new ManageAllPage(context);
-        ManageServicePage manageServicePage = new ManageServicePage(context);
-        ManageEvaluatePage manageEvaluatePage = new ManageEvaluatePage(context);
-        ManageCancelPage manageCancelPage = new ManageCancelPage(context);
-        mViewList.add(manageAllPage.view);
-        mViewList.add(manageServicePage.view);
-        mViewList.add(manageEvaluatePage.view);
-        mViewList.add(manageCancelPage.view);
-        adapter = new TyViewPagerAdapter(mViewList);
+        ManageAllPage manageAllPage = new ManageAllPage();
+        ManageServicePage manageServicePage = new ManageServicePage();
+        ManageEvaluatePage manageEvaluatePage = new ManageEvaluatePage();
+        ManageCancelPage manageCancelPage = new ManageCancelPage();
+        fragments.add(manageAllPage);
+        fragments.add(manageServicePage);
+        fragments.add(manageEvaluatePage);
+        fragments.add(manageCancelPage);
+        adapter = new TyViewPagerAdapter(getActivity().getSupportFragmentManager(),fragments);
         vp_manage.setAdapter(adapter);
     }
 
@@ -69,7 +63,6 @@ public class ManageFragment extends Fragment implements View.OnClickListener, Vi
         tv_cancel = (TextView) view.findViewById(R.id.tv_cancel);
         //
         vp_manage = (ViewPager) view.findViewById(R.id.vp_manage);
-        vp_manage.addOnPageChangeListener(this);
         tv_all.setOnClickListener(this);
         tv_service.setOnClickListener(this);
         tv_evaluate.setOnClickListener(this);
@@ -121,30 +114,5 @@ public class ManageFragment extends Fragment implements View.OnClickListener, Vi
         tv_evaluate.setTextColor(Color.BLACK);
         tv_cancel.setTextColor(Color.BLACK);
         textView.setTextColor(getResources().getColor(R.color.zise));
-    }
-
-
-    @Override
-    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
-    }
-
-    @Override
-    public void onPageSelected(int position) {
-        if (position == 0) {
-            setBottomDrawable(tv_all);
-        } else if (position == 1) {
-            setBottomDrawable(tv_service);
-        } else if (position == 2) {
-            setBottomDrawable(tv_evaluate);
-        } else if (position == 3) {
-            setBottomDrawable(tv_cancel);
-        }
-
-    }
-
-    @Override
-    public void onPageScrollStateChanged(int state) {
-
     }
 }

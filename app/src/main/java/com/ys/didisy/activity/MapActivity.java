@@ -6,7 +6,7 @@ import com.baidu.mapapi.map.MapView;
 import com.ys.didisy.R;
 
 /**
- * Created by Administrator on 2017/3/14.
+ * Created by Administrator on 2017/img3/14.
  */
 
 public class MapActivity extends BaseActivity {

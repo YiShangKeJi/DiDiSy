@@ -1,5 +1,6 @@
 package com.ys.didisy.activity;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -8,23 +9,21 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import com.ys.didisy.R;
-import com.ys.didisy.adapter.TyViewPagerAdapter;
-import com.ys.didisy.viewpager.GuideOnePage;
-import com.ys.didisy.viewpager.GuideThreePage;
-import com.ys.didisy.viewpager.GuideTwoPage;
+import com.ys.didisy.adapter.MyPagerAdapter;
+
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * 引导页
  */
-public class GuideActivity extends BaseActivity implements
+public class GuideActivity extends Activity implements
 		ViewPager.OnPageChangeListener {
 	private ViewPager viewPager;
 	private ViewGroup mGroup;
 	private View[] mPoint;// 存放小圆点
-	private TyViewPagerAdapter adapter;
-	private List<View> mViewList;
+	private MyPagerAdapter adapter;
+	private List<Integer> mImageList;
 	private SharedPreferences preferences;
 
 	@Override
@@ -47,14 +46,11 @@ public class GuideActivity extends BaseActivity implements
 	private void init() {
 		viewPager = (ViewPager) findViewById(R.id.vp_welcome);
 		mGroup = (ViewGroup) findViewById(R.id.view_group_welcome);
-		GuideOnePage onePage = new GuideOnePage(this);
-		GuideTwoPage twoPage = new GuideTwoPage(this);
-		GuideThreePage threePage = new GuideThreePage(this);
-		mViewList = new ArrayList<View>();
-		mViewList.add(onePage.view);
-		mViewList.add(twoPage.view);
-		mViewList.add(threePage.view);
-		adapter = new TyViewPagerAdapter(mViewList);
+		mImageList = new ArrayList<Integer>();
+		mImageList.add(R.drawable.img1);
+		mImageList.add(R.drawable.img2);
+		mImageList.add(R.drawable.img3);
+		adapter = new MyPagerAdapter(this,mImageList);
 		viewPager.setAdapter(adapter);
 		viewPager.addOnPageChangeListener(this);
 	}
@@ -63,7 +59,7 @@ public class GuideActivity extends BaseActivity implements
 	 */
 	private void initPoint() {
 		// 给数组添加小圆点
-		mPoint = new View[mViewList.size()];
+		mPoint = new View[mImageList.size()];
 		LinearLayout.LayoutParams paramsv = new LinearLayout.LayoutParams(15,
 				15);
 		for (int i = 0; i < mPoint.length; i++) {

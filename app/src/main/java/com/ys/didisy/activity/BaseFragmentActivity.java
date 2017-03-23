@@ -1,21 +1,23 @@
 package com.ys.didisy.activity;
 
-import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
-import android.view.WindowManager;
+import android.support.v4.app.FragmentActivity;
+import android.view.Window;
 
 import com.ys.didisy.util.AppManager;
 
-
-public class BaseActivity extends Activity {
+public class BaseFragmentActivity extends FragmentActivity {
+    protected Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        // TODO Auto-generated method stub
+        context = this;
         super.onCreate(savedInstanceState);
-        this.getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         AppManager.getInstance().addActivity(this);
     }
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
