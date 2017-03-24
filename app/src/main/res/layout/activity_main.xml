@@ -3,19 +3,12 @@
     android:background="@color/colorTheme"
     android:orientation="vertical">
 
-    <!--<FrameLayout-->
-        <!--android:id="@+id/fl_main"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="0px"-->
-        <!--android:layout_weight="img1"-->
-        <!--android:layout_above="@+id/rg_main"-->
-        <!--android:background="@color/white" />-->
     <android.support.v4.view.ViewPager
-        android:id="@+id/vp_manage"
+        android:id="@+id/vp_manage_mian"
         android:layout_width="match_parent"
         android:layout_height="0px"
-        android:layout_weight="1"
         android:layout_above="@+id/rg_main"
+        android:layout_weight="1"
         android:background="@color/bg_color" />
 
     <RadioGroup
@@ -24,13 +17,15 @@
         android:layout_height="@dimen/y115"
         android:layout_alignParentBottom="true"
         android:background="@color/colorTheme"
-        android:orientation="horizontal" >
+        android:orientation="horizontal">
+
         <RadioButton
             android:id="@+id/rb_plan"
             style="@style/main_radio_button"
-            android:drawableTop="@drawable/plan"
             android:checked="true"
+            android:drawableTop="@drawable/plan"
             android:text="订单管理" />
+
         <RadioButton
             android:id="@+id/rb_homepage"
             style="@style/main_radio_button"

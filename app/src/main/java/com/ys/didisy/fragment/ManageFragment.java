@@ -10,8 +10,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
-
 import com.ys.didisy.R;
 import com.ys.didisy.adapter.TyViewPagerAdapter;
 import java.util.ArrayList;
@@ -20,7 +18,7 @@ import java.util.List;
 /**
  * 订单管理
  */
-public class ManageFragment extends Fragment implements View.OnClickListener{
+public class ManageFragment extends Fragment implements View.OnClickListener {
     public View view;
     private Context context;
     private TextView tv_all;
@@ -52,7 +50,7 @@ public class ManageFragment extends Fragment implements View.OnClickListener{
         fragments.add(manageServicePage);
         fragments.add(manageEvaluatePage);
         fragments.add(manageCancelPage);
-        adapter = new TyViewPagerAdapter(getActivity().getSupportFragmentManager(),fragments);
+        adapter = new TyViewPagerAdapter(getActivity().getSupportFragmentManager(), fragments);
         vp_manage.setAdapter(adapter);
     }
 
@@ -67,6 +65,30 @@ public class ManageFragment extends Fragment implements View.OnClickListener{
         tv_service.setOnClickListener(this);
         tv_evaluate.setOnClickListener(this);
         tv_cancel.setOnClickListener(this);
+        vp_manage.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                if (position == 0) {
+                    setBottomDrawable(tv_all);
+                } else if (position == 1) {
+                    setBottomDrawable(tv_service);
+                } else if (position == 2) {
+                    setBottomDrawable(tv_evaluate);
+                } else if (position == 3) {
+                    setBottomDrawable(tv_cancel);
+                }
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
     }
 
 
@@ -96,6 +118,7 @@ public class ManageFragment extends Fragment implements View.OnClickListener{
 
     /**
      * 设置滑动活点击选中状态
+     *
      * @param textView
      */
     private void setBottomDrawable(TextView textView) {
@@ -115,4 +138,5 @@ public class ManageFragment extends Fragment implements View.OnClickListener{
         tv_cancel.setTextColor(Color.BLACK);
         textView.setTextColor(getResources().getColor(R.color.zise));
     }
+
 }
