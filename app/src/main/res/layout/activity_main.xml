@@ -9,7 +9,7 @@
         android:layout_height="0px"
         android:layout_above="@+id/rg_main"
         android:layout_weight="1"
-        android:background="@color/bg_color" />
+        android:background="@color/white" />
 
     <RadioGroup
         android:id="@+id/rg_main"

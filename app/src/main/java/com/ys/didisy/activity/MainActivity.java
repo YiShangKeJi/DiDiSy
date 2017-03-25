@@ -27,7 +27,7 @@ import java.util.List;
 /**
  * Created by Administrator on 2017/img3/6.
  */
-public class MainActivity extends FragmentActivity implements OnCheckedChangeListener {
+public class MainActivity extends BaseFragmentActivity implements OnCheckedChangeListener {
     private OrderFragment orderFragment;
     private ManageFragment manageFragment;
     private ActivityFragment activityFragment;
@@ -44,8 +44,6 @@ public class MainActivity extends FragmentActivity implements OnCheckedChangeLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        this.getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-        AppManager.getInstance().addActivity(this);
         sureCancelDialog = new SureCancelDialog(this);
         initView();
     }
@@ -64,6 +62,8 @@ public class MainActivity extends FragmentActivity implements OnCheckedChangeLis
         personFragment = new PersonFragment();
         fragments.add(personFragment);
         adapter = new TyViewPagerAdapter(getSupportFragmentManager(), fragments);
+        //预加载4张，避免切换闪屏问题
+        vp_manage.setOffscreenPageLimit(4);
         vp_manage.setAdapter(adapter);
         vp_manage.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
@@ -89,19 +89,19 @@ public class MainActivity extends FragmentActivity implements OnCheckedChangeLis
         switch (id) {
             case R.id.rb_plan:
                 ((RadioButton) group.getChildAt(0)).setChecked(true);
-                vp_manage.setCurrentItem(0, true);
+                vp_manage.setCurrentItem(0, false);
                 break;
             case R.id.rb_homepage:
                 ((RadioButton) group.getChildAt(1)).setChecked(true);
-                vp_manage.setCurrentItem(1, true);
+                vp_manage.setCurrentItem(1, false);
                 break;
             case R.id.rb_friend:
                 ((RadioButton) group.getChildAt(2)).setChecked(true);
-                vp_manage.setCurrentItem(2, true);
+                vp_manage.setCurrentItem(2, false);
                 break;
             case R.id.rb_person:
                 ((RadioButton) group.getChildAt(3)).setChecked(true);
-                vp_manage.setCurrentItem(3, true);
+                vp_manage.setCurrentItem(3, false);
                 break;
             default:
                 break;
