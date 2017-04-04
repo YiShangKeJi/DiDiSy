@@ -4,28 +4,32 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:orientation="vertical">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/y100"
         android:background="@color/gray">
+
         <TextView
             android:id="@+id/textView2"
-            style="@style/text_14_black"
+            style="@style/text_14"
             android:layout_width="@dimen/x100"
-            android:layout_height="@dimen/y80"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
             android:layout_marginLeft="@dimen/x10"
             android:text="西安" />
-    <TextView
-        android:id="@+id/tv_map"
-        style="@style/text_14"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/y80"
-        android:gravity="center"
-        android:layout_toRightOf="@+id/textView2"
-        android:paddingRight="@dimen/x30"
-        android:drawableRight="@drawable/right_jiantou"
-        android:text="附近有100辆货车可提供服务" />
+
+        <TextView
+            android:id="@+id/tv_map"
+            style="@style/text_14"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/textView2"
+            android:drawableRight="@drawable/right_jiantou"
+            android:paddingRight="@dimen/x30"
+            android:text="附近有100辆货车可提供服务" />
     </RelativeLayout>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -37,37 +41,46 @@
             android:layout_margin="@dimen/y15"
             android:orientation="vertical">
 
-            <TextView
-                style="@style/text_14"
+            <LinearLayout
+                android:id="@+id/ll_small"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/y250"
                 android:layout_margin="@dimen/x10"
-                android:background="@drawable/rectangle" />
+                android:background="@drawable/rectangle"
+                android:orientation="horizontal">
 
-            <TextView
-                style="@style/text_14"
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_middle"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/y250"
                 android:layout_margin="@dimen/x10"
-                android:background="@drawable/rectangle" />
+                android:background="@drawable/rectangle"
+                android:orientation="horizontal">
 
-            <TextView
-                style="@style/text_14"
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_big"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/y250"
                 android:layout_margin="@dimen/x10"
-                android:background="@drawable/rectangle" />
+                android:background="@drawable/rectangle"
+                android:orientation="horizontal">
 
-            <TextView
-                style="@style/text_14"
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_most"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/y250"
                 android:layout_margin="@dimen/x10"
-                android:background="@drawable/rectangle" />
+                android:background="@drawable/rectangle"
+                android:orientation="horizontal">
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/y20" />
+            </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

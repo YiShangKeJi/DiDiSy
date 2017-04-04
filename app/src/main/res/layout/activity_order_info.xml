@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/fit_windows"
+    android:background="@color/gray"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y100"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_back"
+            style="@style/text_14"
+            android:layout_width="@dimen/x50"
+            android:layout_height="@dimen/y50"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x20"
+            android:background="@drawable/plan" />
+
+        <TextView
+            android:id="@+id/tv_rote"
+            style="@style/text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x20"
+            android:text="常用路线" />
+
+        <TextView
+            style="@style/text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:text="完善订单信息" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y100"
+                android:layout_marginTop="@dimen/y20"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text_16"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="@dimen/x20"
+                    android:background="@drawable/my_on"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="30px" />
+
+                <TextView
+                    style="@style/text_14"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="30px"
+                    android:text="用车时间" />
+
+                <TextView
+                    style="@style/text_16"
+                    android:layout_width="@dimen/x20"
+                    android:layout_height="@dimen/x30"
+                    android:layout_marginRight="30px"
+                    android:background="@drawable/right_jiantou"
+                    android:gravity="center|right" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y1"
+                android:background="@color/colorPrimary"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y100"
+                android:layout_marginTop="@dimen/y20"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text_16"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/x20"
+                    android:background="@drawable/my_on"
+                    android:paddingLeft="30px" />
+
+                <LinearLayout
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/text_14"
+                        android:layout_width="match_parent"
+                        android:layout_height="0px"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="30px"
+                        android:text="振兴" />
+
+                    <TextView
+                        style="@style/text_14"
+                        android:layout_width="match_parent"
+                        android:layout_height="0px"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="30px"
+                        android:text="18756445412" />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/text_16"
+                    android:layout_width="@dimen/x20"
+                    android:layout_height="@dimen/x30"
+                    android:layout_gravity="center|right"
+                    android:layout_marginRight="30px"
+                    android:background="@drawable/right_jiantou" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y1"
+                android:background="@color/bg_title"
+                android:paddingLeft="@dimen/y20"
+                android:paddingRight="@dimen/y20"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y100"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text_16"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="@dimen/x20"
+                    android:background="@drawable/my_on"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="30px" />
+
+                <TextView
+                    style="@style/text_14"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="30px"
+                    android:text="桃花潭" />
+
+                <TextView
+                    android:id="@+id/tv_signature"
+                    style="@style/text_16"
+                    android:layout_width="@dimen/x20"
+                    android:layout_height="@dimen/x30"
+                    android:layout_marginRight="30px"
+                    android:background="@drawable/right_jiantou"
+                    android:gravity="center|right" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y1"
+                android:background="@color/colorPrimary"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y100"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text_14"
+                    android:layout_width="@dimen/x100"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:background="@drawable/rectangle"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="30px"
+                    android:text="添加目的地" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y100"
+                android:layout_marginTop="@dimen/y20"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text_16"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="@dimen/x20"
+                    android:background="@drawable/my_on"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="30px" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    style="@style/text_14"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="30px"
+                    android:text="额外服务" />
+
+                <TextView
+                    style="@style/text_16"
+                    android:layout_width="@dimen/x20"
+                    android:layout_height="@dimen/x30"
+                    android:layout_marginRight="30px"
+                    android:background="@drawable/right_jiantou"
+                    android:gravity="center|right" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y100"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text_16"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="@dimen/x20"
+                    android:background="@drawable/my_on"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="30px" />
+
+                <TextView
+                    style="@style/text_14"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="30px"
+                    android:text="给司机捎句话" />
+
+                <TextView
+                    style="@style/text_16"
+                    android:layout_width="@dimen/x20"
+                    android:layout_height="@dimen/x30"
+                    android:layout_marginRight="30px"
+                    android:background="@drawable/right_jiantou"
+                    android:gravity="center|right" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y200"
+                android:layout_marginTop="@dimen/y100"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/text_12"
+                        android:layout_width="@dimen/x220"
+                        android:layout_height="0px"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:drawableLeft="@drawable/home_page_on"
+                        android:text="自主选择司机" />
+
+                    <TextView
+                        style="@style/text_12"
+                        android:layout_width="match_parent"
+                        android:layout_height="0px"
+                        android:layout_weight="1"
+                        android:text="自主选择司机" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="@dimen/y1"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/y10"
+                    android:layout_marginTop="@dimen/y10"
+                    android:background="@color/colorPrimary"></View>
+
+                <LinearLayout
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/text_12"
+                        android:layout_width="@dimen/x220"
+                        android:layout_height="0px"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:drawableLeft="@drawable/home_page_on"
+                        android:text="自主选择司机" />
+
+                    <TextView
+                        style="@style/text_12"
+                        android:layout_width="match_parent"
+                        android:layout_height="0px"
+                        android:layout_weight="1"
+                        android:text="自主选择司机" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y1"
+                android:background="@color/colorPrimary"></View>
+
+            <TextView
+                android:id="@+id/textView6"
+                style="@style/text_12"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y100"
+                android:background="@color/white"
+                android:text="已经减免60.元" />
+
+            <TextView
+                style="@style/text_12"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y100"
+                android:layout_margin="@dimen/y50"
+                android:background="@color/alert"
+                android:text="下一步" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
