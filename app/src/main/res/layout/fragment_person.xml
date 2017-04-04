@@ -1,20 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    android:id="@+id/fragment_person"
+    android:layout_width="@dimen/x600"
     android:layout_height="match_parent"
     android:background="@color/gray"
     android:orientation="vertical"
+    android:layout_gravity="start"
     android:scrollbars="none">
-
-    <TextView
-        android:id="@+id/tv_title"
-        style="@style/text_title"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/y100"
-        android:layout_gravity="center"
-        android:background="@color/colorTheme"
-        android:text="个人中心" />
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -25,16 +17,14 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/tv_head"
-                style="@style/text_title"
+            <com.ys.didisy.widget.FormerCircleImageView
+                android:id="@+id/imgUser"
+                style="@style/Moren_touxiang"
                 android:layout_width="@dimen/y100"
                 android:layout_height="@dimen/y100"
                 android:layout_gravity="center"
                 android:layout_marginTop="@dimen/y100"
-                android:background="@drawable/homepage" />
-
+                />
             <TextView
                 android:id="@+id/tv_phone"
                 style="@style/text_title"

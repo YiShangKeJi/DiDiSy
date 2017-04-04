@@ -3,11 +3,4 @@
     style="@style/fit_windows"
     android:background="@color/white">
 
-    <TextView
-        android:id="@+id/textView3"
-        style="@style/text_title"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/y100"
-        android:background="@color/colorTheme"
-        android:text="优惠活动" />
 </LinearLayout>
