@@ -12,11 +12,10 @@
         <TextView
             android:id="@+id/tv_back"
             style="@style/text_14"
-            android:layout_width="@dimen/x50"
-            android:layout_height="@dimen/y50"
+            android:layout_width="@dimen/y100"
+            android:layout_height="match_parent"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="@dimen/x20"
-            android:background="@drawable/my_on" />
+            android:background="@drawable/left_jiantou" />
 
         <TextView
             android:id="@+id/tv_rote"

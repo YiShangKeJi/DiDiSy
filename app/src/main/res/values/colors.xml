@@ -24,4 +24,6 @@
     <color name="info">#669900</color>
     <color name="custom">#0099CC</color>
     <color name="zise">#8B7B8B</color>
+    <color name="font">#333333</color>
+    <color name="red">#FF0000</color>
 </resources>
