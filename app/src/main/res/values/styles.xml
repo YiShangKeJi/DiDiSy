@@ -133,4 +133,8 @@
     <style name="Moren_touxiang">
         <item name="android:src">@drawable/imgae_3</item>
     </style>
+
+    <style name="MyDialog" parent="@android:style/Theme.Holo.Light.Dialog">
+        <item name="android:windowBackground">@color/mycolor</item>
+    </style>
 </resources>
