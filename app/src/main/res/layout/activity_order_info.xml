@@ -338,7 +338,7 @@
                 android:id="@+id/textView6"
                 style="@style/text_12"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/y100"
+                android:layout_height="@dimen/y80"
                 android:background="@color/white"
                 android:text="已经减免60.元" />
 
@@ -347,7 +347,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/y100"
                 android:layout_margin="@dimen/y50"
-                android:background="@color/alert"
+                android:background="@color/confirm"
                 android:text="下一步" />
         </LinearLayout>
     </ScrollView>

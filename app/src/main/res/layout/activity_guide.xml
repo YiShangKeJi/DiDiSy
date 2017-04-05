@@ -8,7 +8,7 @@
         android:id="@+id/vp_welcome"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="@dimen/y50"/>
+        android:layout_marginBottom="@dimen/y50" />
 
     <LinearLayout
         android:id="@+id/view_group_welcome"
@@ -17,7 +17,37 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="@dimen/y80"
         android:gravity="center"
-        android:orientation="horizontal" >
-    </LinearLayout>
+        android:orientation="horizontal"></LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/ll_enter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/y100"
+        android:animateLayoutChanges="true"
+        android:animationCache="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_look"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y100"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/rectangle"
+            android:gravity="center"
+            android:text="随便 看看" />
+
+        <TextView
+            android:id="@+id/tv_sign"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y100"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/y50"
+            android:background="@drawable/rectangle"
+            android:gravity="center"
+            android:text="注册/登录" />
+    </LinearLayout>
 </RelativeLayout>
