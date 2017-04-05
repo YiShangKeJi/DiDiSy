@@ -77,7 +77,7 @@ public class MainActivity extends BaseFragmentActivity implements OnCheckedChang
         title = (TextView)findViewById(R.id.title);//标题
         activity_main = (DrawerLayout) findViewById(R.id.activity_main);
         my_on = (ImageView) findViewById(R.id.my_on);
-        activity_main.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);//侧滑手势
+//        activity_main.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);//侧滑手势关闭
         menuLayout = (LinearLayout) findViewById(R.id.fragment_person); // 侧滑布局
         initViewMenu();//侧滑布局初始化
         vp_manage = (ViewPager) findViewById(R.id.vp_manage_mian); //初始化Fragment

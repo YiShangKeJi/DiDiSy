@@ -20,14 +20,13 @@ import java.util.List;
 /**
  * 引导页
  */
-public class GuideActivity extends Activity implements
+public class GuideActivity extends BaseActivity implements
         ViewPager.OnPageChangeListener, View.OnClickListener {
     private ViewPager viewPager;
     private View[] mPoint;// 存放小圆点
     private MyPagerAdapter adapter;
     private List<Integer> mImageList;
     private SharedPreferences preferences;
-
     private LinearLayout mGroup;
     private LinearLayout ll_enter;
     private TextView tv_look;
