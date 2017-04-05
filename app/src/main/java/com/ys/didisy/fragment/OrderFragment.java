@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.ys.didisy.R;
 import com.ys.didisy.activity.MapActivity;
+import com.ys.didisy.activity.OrderInfoActivity;
 
 /**
  * 下单
@@ -48,24 +49,26 @@ public class OrderFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
+        Intent intent = null;
         switch (view.getId()) {
             case R.id.tv_map:
-                Intent intent = new Intent(getActivity(), MapActivity.class);
+                intent = new Intent(getActivity(), MapActivity.class);
                 startActivity(intent);
                 break;
             case R.id.ll_small:
+                intent = new Intent(getActivity(), OrderInfoActivity.class);
 
                 break;
             case R.id.ll_middle:
-
+                intent = new Intent(getActivity(), OrderInfoActivity.class);
                 break;
             case R.id.ll_big:
-
+                intent = new Intent(getActivity(), OrderInfoActivity.class);
                 break;
             case R.id.ll_most:
-
+                intent = new Intent(getActivity(), OrderInfoActivity.class);
                 break;
-
         }
+        startActivity(intent);
     }
 }

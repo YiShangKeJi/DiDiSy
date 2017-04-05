@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/fit_windows"
+    android:background="@color/gray"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y100"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_back"
+            style="@style/text_14"
+            android:layout_width="@dimen/x50"
+            android:layout_height="@dimen/y50"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x20"
+            android:background="@drawable/my_on" />
+
+        <TextView
+            android:id="@+id/tv_rote"
+            style="@style/text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x20"
+            android:text="切换地图选点" />
+
+        <TextView
+            style="@style/text_18"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:text="收货信息" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y100"
+        android:layout_marginTop="@dimen/y20"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/text_16"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="@dimen/x20"
+            android:background="@drawable/my_on"
+            android:gravity="center_vertical"
+            android:paddingLeft="30px" />
+
+        <TextView
+            style="@style/text_14"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:gravity="center_vertical"
+            android:paddingLeft="30px"
+            android:text="桃花潭" />
+
+        <TextView
+            style="@style/text_16"
+            android:layout_width="@dimen/x20"
+            android:layout_height="@dimen/x30"
+            android:layout_gravity="center"
+            android:layout_marginRight="30px"
+            android:background="@drawable/right_jiantou" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y100"
+        android:layout_marginTop="@dimen/y1"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/text_16"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="@dimen/x20"
+            android:background="@drawable/my_on"
+            android:gravity="center_vertical"
+            android:paddingLeft="30px" />
+
+        <TextView
+            style="@style/text_14"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:gravity="center_vertical"
+            android:hint="请填写详细信息（可不填）"
+            android:paddingLeft="30px" />
+
+        <TextView
+            style="@style/text_16"
+            android:layout_width="@dimen/x20"
+            android:layout_height="@dimen/x30"
+            android:layout_gravity="center"
+            android:layout_marginRight="30px"
+            android:background="@drawable/right_jiantou" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y100"
+        android:layout_marginTop="@dimen/y20"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/text_16"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="@dimen/x20"
+            android:background="@drawable/my_on"
+            android:gravity="center_vertical"
+            android:paddingLeft="30px" />
+
+        <TextView
+            style="@style/text_14"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:gravity="center_vertical"
+            android:hint="请输入发货人姓名（可不填）"
+            android:paddingLeft="30px" />
+
+        <TextView
+            style="@style/text_16"
+            android:layout_width="@dimen/x20"
+            android:layout_height="@dimen/x30"
+            android:layout_gravity="center"
+            android:layout_marginRight="30px"
+            android:background="@drawable/right_jiantou" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y100"
+        android:layout_marginTop="@dimen/y1"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/text_16"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="@dimen/x20"
+            android:background="@drawable/my_on"
+            android:gravity="center_vertical"
+            android:paddingLeft="30px" />
+
+        <TextView
+            style="@style/text_14"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:gravity="center_vertical"
+            android:paddingLeft="30px"
+            android:text="桃花潭" />
+
+        <TextView
+            android:id="@+id/tv_signature"
+            style="@style/text_16"
+            android:layout_width="@dimen/x20"
+            android:layout_height="@dimen/x30"
+            android:layout_gravity="center"
+            android:layout_marginRight="30px"
+            android:background="@drawable/right_jiantou" />
+    </LinearLayout>
+
+
+    <TextView
+        style="@style/text_12"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y100"
+        android:layout_margin="@dimen/y50"
+        android:background="@color/confirm"
+        android:text="下一步" />
+</LinearLayout>
+
+

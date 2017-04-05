@@ -4,7 +4,6 @@
     android:background="@color/gray"
     android:orientation="vertical">
 
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/y100"
@@ -17,7 +16,7 @@
             android:layout_height="@dimen/y50"
             android:layout_centerVertical="true"
             android:layout_marginLeft="@dimen/x20"
-            android:background="@drawable/plan" />
+            android:background="@drawable/my_on" />
 
         <TextView
             android:id="@+id/tv_rote"
@@ -30,16 +29,17 @@
             android:text="常用路线" />
 
         <TextView
-            style="@style/text_14"
+            style="@style/text_18"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_centerInParent="true"
             android:text="完善订单信息" />
     </RelativeLayout>
 
-    <ScrollView
+    <com.ys.didisy.widget.ReboundScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:scrollbars="none">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -47,6 +47,7 @@
             android:orientation="vertical">
 
             <LinearLayout
+                android:id="@+id/ll_choose_date"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/y100"
                 android:layout_marginTop="@dimen/y20"
@@ -66,26 +67,40 @@
                     style="@style/text_14"
                     android:layout_width="0px"
                     android:layout_height="match_parent"
-                    android:layout_weight="5"
+                    android:layout_weight="2"
                     android:gravity="center_vertical"
                     android:paddingLeft="30px"
                     android:text="用车时间" />
 
                 <TextView
                     style="@style/text_16"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="30px"
+                    android:text="现在" />
+
+                <TextView
+                    style="@style/text_16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="30px"
+                    android:paddingRight="@dimen/x20"
+                    android:text="点击修改" />
+
+                <TextView
+                    style="@style/text_16"
                     android:layout_width="@dimen/x20"
                     android:layout_height="@dimen/x30"
+                    android:layout_gravity="center"
                     android:layout_marginRight="30px"
-                    android:background="@drawable/right_jiantou"
-                    android:gravity="center|right" />
+                    android:background="@drawable/right_jiantou" />
             </LinearLayout>
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/y1"
-                android:background="@color/colorPrimary"></View>
-
             <LinearLayout
+                android:id="@+id/ll_location"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/y100"
                 android:layout_marginTop="@dimen/y20"
@@ -117,6 +132,7 @@
                         android:text="振兴" />
 
                     <TextView
+                        android:id="@+id/textView3"
                         style="@style/text_14"
                         android:layout_width="match_parent"
                         android:layout_height="0px"
@@ -130,21 +146,16 @@
                     style="@style/text_16"
                     android:layout_width="@dimen/x20"
                     android:layout_height="@dimen/x30"
-                    android:layout_gravity="center|right"
+                    android:layout_gravity="center"
                     android:layout_marginRight="30px"
                     android:background="@drawable/right_jiantou" />
             </LinearLayout>
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/y1"
-                android:background="@color/bg_title"
-                android:paddingLeft="@dimen/y20"
-                android:paddingRight="@dimen/y20"></View>
-
             <LinearLayout
+                android:id="@+id/ll_destination"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/y100"
+                android:layout_marginTop="@dimen/y1"
                 android:background="@color/white"
                 android:orientation="horizontal">
 
@@ -171,19 +182,15 @@
                     style="@style/text_16"
                     android:layout_width="@dimen/x20"
                     android:layout_height="@dimen/x30"
+                    android:layout_gravity="center"
                     android:layout_marginRight="30px"
-                    android:background="@drawable/right_jiantou"
-                    android:gravity="center|right" />
+                    android:background="@drawable/right_jiantou" />
             </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/y1"
-                android:background="@color/colorPrimary"></View>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/y100"
+                android:layout_marginTop="@dimen/y1"
                 android:background="@color/white"
                 android:orientation="horizontal">
 
@@ -200,6 +207,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/ll_extra_service"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/y100"
                 android:layout_marginTop="@dimen/y20"
@@ -216,14 +224,22 @@
                     android:paddingLeft="30px" />
 
                 <TextView
-                    android:id="@+id/textView5"
                     style="@style/text_14"
                     android:layout_width="0px"
                     android:layout_height="match_parent"
-                    android:layout_weight="5"
+                    android:layout_weight="2"
                     android:gravity="center_vertical"
                     android:paddingLeft="30px"
                     android:text="额外服务" />
+
+                <TextView
+                    style="@style/text_16"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="30px"
+                    android:text="装卸、回单、回款等服务" />
 
                 <TextView
                     style="@style/text_16"
@@ -253,10 +269,19 @@
                     style="@style/text_14"
                     android:layout_width="0px"
                     android:layout_height="match_parent"
-                    android:layout_weight="5"
+                    android:layout_weight="2"
                     android:gravity="center_vertical"
                     android:paddingLeft="30px"
                     android:text="给司机捎句话" />
+
+                <TextView
+                    style="@style/text_16"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="30px"
+                    android:text="货物类型、特殊情况" />
 
                 <TextView
                     style="@style/text_16"
@@ -270,7 +295,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/y200"
-                android:layout_marginTop="@dimen/y100"
+                android:layout_marginTop="@dimen/y50"
                 android:background="@color/white"
                 android:orientation="horizontal">
 
@@ -282,19 +307,43 @@
 
                     <TextView
                         style="@style/text_12"
-                        android:layout_width="@dimen/x220"
+                        android:layout_width="wrap_content"
                         android:layout_height="0px"
                         android:layout_gravity="center_horizontal"
                         android:layout_weight="1"
                         android:drawableLeft="@drawable/home_page_on"
                         android:text="自主选择司机" />
 
-                    <TextView
-                        style="@style/text_12"
-                        android:layout_width="match_parent"
+                    <LinearLayout
+                        android:layout_width="wrap_content"
                         android:layout_height="0px"
+                        android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:text="自主选择司机" />
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/text_12"
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="@dimen/x20"
+                            android:layout_weight="1"
+                            android:text="约" />
+
+                        <TextView
+                            style="@style/text_30"
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="54.5" />
+
+                        <ImageView
+                            style="@style/text_12"
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/x20"
+                            android:layout_weight="1"
+                            android:src="@drawable/right_jiantou" />
+                    </LinearLayout>
                 </LinearLayout>
 
                 <View
@@ -311,21 +360,47 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/textView7"
                         style="@style/text_12"
-                        android:layout_width="@dimen/x220"
+                        android:layout_width="wrap_content"
                         android:layout_height="0px"
                         android:layout_gravity="center_horizontal"
                         android:layout_weight="1"
                         android:drawableLeft="@drawable/home_page_on"
-                        android:text="自主选择司机" />
+                        android:text="系统选择司机" />
 
-                    <TextView
-                        style="@style/text_12"
-                        android:layout_width="match_parent"
+                    <LinearLayout
+                        android:layout_width="wrap_content"
                         android:layout_height="0px"
+                        android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:text="自主选择司机" />
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/text_12"
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="@dimen/x20"
+                            android:layout_weight="1"
+                            android:text="约" />
+
+                        <TextView
+                            style="@style/text_30"
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="54.5" />
+
+                        <ImageView
+                            style="@style/text_12"
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/x20"
+                            android:layout_weight="1"
+                            android:src="@drawable/right_jiantou" />
+                    </LinearLayout>
                 </LinearLayout>
+
 
             </LinearLayout>
 
@@ -350,5 +425,5 @@
                 android:background="@color/confirm"
                 android:text="下一步" />
         </LinearLayout>
-    </ScrollView>
+    </com.ys.didisy.widget.ReboundScrollView>
 </LinearLayout>

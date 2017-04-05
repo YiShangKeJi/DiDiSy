@@ -25,6 +25,7 @@
         <activity android:name="com.ys.didisy.activity.BaseActivity"></activity>
         <activity android:name="com.ys.didisy.activity.MainActivity"></activity>
         <activity android:name="com.ys.didisy.activity.MapActivity"></activity>
+        <activity android:name="com.ys.didisy.activity.OrderInfoActivity"></activity>
     </application>
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
