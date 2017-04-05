@@ -15,10 +15,11 @@ public class GenerateValueFiles {
     private int baseW;
     private int baseH;
 
-    private String dirStr = "./res";
+    private String dirStr = "./app/src/main/res";
 
     private final static String WTemplate = "<dimen name=\"x{0}\">{1}px</dimen>\n";
     private final static String HTemplate = "<dimen name=\"y{0}\">{1}px</dimen>\n";
+    private final static String SPTemplate = "<dimen name=\"s{0}\">{1}sp</dimen>\n";
 
     /**
      * {0}-HEIGHT
@@ -90,6 +91,7 @@ public class GenerateValueFiles {
 
     private void generateXmlFile(int w, int h) {
 
+        //X
         StringBuffer sbForWidth = new StringBuffer();
         sbForWidth.append("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n");
         sbForWidth.append("<resources>");
@@ -104,6 +106,7 @@ public class GenerateValueFiles {
                 w + ""));
         sbForWidth.append("</resources>");
 
+        //Y
         StringBuffer sbForHeight = new StringBuffer();
         sbForHeight.append("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n");
         sbForHeight.append("<resources>");
@@ -117,19 +120,39 @@ public class GenerateValueFiles {
                 h + ""));
         sbForHeight.append("</resources>");
 
+
+        //SP
+        StringBuffer sp = new StringBuffer();
+        sp.append("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n");
+        sp.append("<resources>");
+        float cellsp = w *1.0f/ baseW;
+        for (int i = 1; i < 100; i++) {
+            sp.append(SPTemplate.replace("{0}", i + "").replace("{1}",
+                    change(cellsp * i) + ""));
+        }
+        sp.append(SPTemplate.replace("{0}", 100 + "").replace("{1}",
+                100 + ""));
+        sp.append("</resources>");
+
+
+//文件夹
         File fileDir = new File(dirStr + File.separator
                 + VALUE_TEMPLATE.replace("{0}", h + "")//
                 .replace("{1}", w + ""));
         fileDir.mkdir();
-
+//文件名
         File layxFile = new File(fileDir.getAbsolutePath(), "lay_x.xml");
         File layyFile = new File(fileDir.getAbsolutePath(), "lay_y.xml");
+        File layspyFile = new File(fileDir.getAbsolutePath(), "lay_sp.xml");
         try {
             PrintWriter pw = new PrintWriter(new FileOutputStream(layxFile));
             pw.print(sbForWidth.toString());
             pw.close();
             pw = new PrintWriter(new FileOutputStream(layyFile));
             pw.print(sbForHeight.toString());
+            pw.close();
+            pw = new PrintWriter(new FileOutputStream(layspyFile));
+            pw.print(sp.toString());
             pw.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
