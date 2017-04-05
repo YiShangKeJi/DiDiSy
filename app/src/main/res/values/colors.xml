@@ -8,7 +8,7 @@
     <color name="black">#000000</color>
     <color name="blanktitle">#323333</color>
     <color name="progress_off">#f3ad03</color>
-    <color name="progress_on">#fda100</color>
+    <color name="button_yellow">#fda100</color>
     <color name="light_blue">#663399CC</color>
     <color name="bg_title">#58C5FE</color>
     <color name="bg_color">#B0E2FF</color>

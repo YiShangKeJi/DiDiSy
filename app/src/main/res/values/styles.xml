@@ -24,7 +24,7 @@
         <item name="android:gravity">center</item>
     </style>
 
-    <style name="text_15">
+    <style name="text_ty">
         <item name="android:textColor">@color/font</item>
         <item name="android:textSize">15sp</item>
         <item name="android:gravity">center</item>

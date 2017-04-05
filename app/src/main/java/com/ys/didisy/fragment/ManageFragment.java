@@ -122,7 +122,7 @@ public class ManageFragment extends Fragment implements View.OnClickListener {
      * @param textView
      */
     private void setBottomDrawable(TextView textView) {
-        Drawable drawableOn = getResources().getDrawable(R.color.progress_on);
+        Drawable drawableOn = getResources().getDrawable(R.color.button_yellow);
         Drawable drawableOff = getResources().getDrawable(R.color.touming);
         drawableOn.setBounds(0, 0, 200, 6);
         drawableOff.setBounds(0, 0, 200, 6);

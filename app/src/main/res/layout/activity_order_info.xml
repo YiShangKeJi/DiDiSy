@@ -11,7 +11,7 @@
 
         <TextView
             android:id="@+id/tv_back"
-            style="@style/text_15"
+            style="@style/text_ty"
             android:layout_width="@dimen/y100"
             android:layout_height="match_parent"
             android:layout_centerVertical="true"
@@ -19,7 +19,7 @@
 
         <TextView
             android:id="@+id/tv_rote"
-            style="@style/text_15"
+            style="@style/text_ty"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_alignParentRight="true"
@@ -54,7 +54,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    style="@style/text_15"
+                    style="@style/text_ty"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_marginLeft="@dimen/x20"
@@ -63,7 +63,7 @@
                     android:paddingLeft="30px" />
 
                 <TextView
-                    style="@style/text_15"
+                    style="@style/text_ty"
                     android:layout_width="0px"
                     android:layout_height="match_parent"
                     android:layout_weight="2"
@@ -72,7 +72,7 @@
                     android:text="用车时间" />
 
                 <TextView
-                    style="@style/text_15"
+                    style="@style/text_ty"
                     android:layout_width="0px"
                     android:layout_height="match_parent"
                     android:layout_weight="3"
@@ -82,7 +82,7 @@
                     android:textColor="@color/red" />
 
                 <TextView
-                    style="@style/text_15"
+                    style="@style/text_ty"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:gravity="center_vertical"
@@ -92,7 +92,7 @@
                     android:textColor="@color/red" />
 
                 <TextView
-                    style="@style/text_15"
+                    style="@style/text_ty"
                     android:layout_width="@dimen/x20"
                     android:layout_height="@dimen/x30"
                     android:layout_gravity="center"
@@ -109,7 +109,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    style="@style/text_15"
+                    style="@style/text_ty"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_gravity="center_vertical"
@@ -124,7 +124,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/text_15"
+                        style="@style/text_ty"
                         android:layout_width="match_parent"
                         android:layout_height="0px"
                         android:layout_weight="1"
@@ -134,7 +134,7 @@
 
                     <TextView
                         android:id="@+id/textView3"
-                        style="@style/text_15"
+                        style="@style/text_ty"
                         android:layout_width="match_parent"
                         android:layout_height="0px"
                         android:layout_weight="1"
@@ -144,7 +144,7 @@
                 </LinearLayout>
 
                 <TextView
-                    style="@style/text_15"
+                    style="@style/text_ty"
                     android:layout_width="@dimen/x20"
                     android:layout_height="@dimen/x30"
                     android:layout_gravity="center"
@@ -161,7 +161,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    style="@style/text_15"
+                    style="@style/text_ty"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_marginLeft="@dimen/x20"
@@ -170,7 +170,7 @@
                     android:paddingLeft="30px" />
 
                 <TextView
-                    style="@style/text_15"
+                    style="@style/text_ty"
                     android:layout_width="0px"
                     android:layout_height="match_parent"
                     android:layout_weight="5"
@@ -180,7 +180,7 @@
 
                 <TextView
                     android:id="@+id/tv_signature"
-                    style="@style/text_15"
+                    style="@style/text_ty"
                     android:layout_width="@dimen/x20"
                     android:layout_height="@dimen/x30"
                     android:layout_gravity="center"
@@ -197,7 +197,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    style="@style/text_15"
+                    style="@style/text_ty"
                     android:layout_width="wrap_content"
                     android:layout_height="@dimen/y70"
                     android:layout_marginLeft="@dimen/x30"
@@ -224,7 +224,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    style="@style/text_15"
+                    style="@style/text_ty"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_marginLeft="@dimen/x20"
@@ -233,7 +233,7 @@
                     android:paddingLeft="30px" />
 
                 <TextView
-                    style="@style/text_15"
+                    style="@style/text_ty"
                     android:layout_width="0px"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -242,7 +242,7 @@
                     android:text="额外服务" />
 
                 <TextView
-                    style="@style/text_15"
+                    style="@style/text_ty"
                     android:layout_width="0px"
                     android:layout_height="match_parent"
                     android:layout_weight="2"
@@ -252,7 +252,7 @@
                     android:textColor="@color/red" />
 
                 <TextView
-                    style="@style/text_15"
+                    style="@style/text_ty"
                     android:layout_width="@dimen/x20"
                     android:layout_height="@dimen/x30"
                     android:layout_gravity="center"
@@ -268,7 +268,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    style="@style/text_15"
+                    style="@style/text_ty"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_marginLeft="@dimen/x20"
@@ -277,7 +277,7 @@
                     android:paddingLeft="30px" />
 
                 <TextView
-                    style="@style/text_15"
+                    style="@style/text_ty"
                     android:layout_width="0px"
                     android:layout_height="match_parent"
                     android:layout_weight="2"
@@ -286,7 +286,7 @@
                     android:text="给司机捎句话" />
 
                 <TextView
-                    style="@style/text_15"
+                    style="@style/text_ty"
                     android:layout_width="0px"
                     android:layout_height="match_parent"
                     android:layout_weight="3"
@@ -296,7 +296,7 @@
                     android:textColor="@color/red" />
 
                 <TextView
-                    style="@style/text_15"
+                    style="@style/text_ty"
                     android:layout_width="@dimen/x20"
                     android:layout_height="@dimen/x30"
                     android:layout_gravity="center"
@@ -479,7 +479,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/y100"
                 android:layout_margin="@dimen/y50"
-                android:background="@color/confirm"
+                android:background="@color/button_yellow"
                 android:text="下一步" />
         </LinearLayout>
     </com.ys.didisy.widget.ReboundScrollView>
