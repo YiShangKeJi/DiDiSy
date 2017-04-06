@@ -24,7 +24,7 @@ public class SendInfoDialog implements OnClickListener {
     }
 
     private void initView() {
-        dialog = BaseDialog.getIntence(context).getDialog(context, R.layout.dialog_send_info,
+        dialog = BaseDialog.getIntence(context).getDialog(R.layout.dialog_send_info,
                 LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
         tv_back = (TextView) dialog.findViewById(R.id.tv_back);
         tv_back.setOnClickListener(this);

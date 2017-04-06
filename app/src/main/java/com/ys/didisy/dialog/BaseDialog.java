@@ -11,6 +11,7 @@ import com.ys.didisy.R;
 
 public class BaseDialog extends Dialog {
     private static BaseDialog baseDialog;
+    private static Context mContext;
 
     public BaseDialog(Context context) {
         super(context);
@@ -21,12 +22,13 @@ public class BaseDialog extends Dialog {
         if (baseDialog == null) {
             baseDialog = new BaseDialog(context);
         }
+        mContext = context;
         return baseDialog;
     }
 
-    public Dialog getDialog(Context m_Context, int layout, int width, int height) {
+    public Dialog getDialog(int layout, int width, int height) {
         // TODO Auto-generated constructor stub
-        Dialog dialog = new Dialog(m_Context, R.style.dialog);
+        Dialog dialog = new Dialog(mContext, R.style.dialog);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(layout);
         Window dialogWindow = dialog.getWindow();

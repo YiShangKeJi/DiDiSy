@@ -21,7 +21,7 @@ public class OutDialog implements OnClickListener {
 	}
 
 	private void initView() {
-		dialog = BaseDialog.getIntence(context).getDialog(context,R.layout.dialog_out,
+		dialog = BaseDialog.getIntence(context).getDialog(R.layout.dialog_out,
 				LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
 		mUpdate = (Button) dialog.findViewById(R.id.bt_update_number);
 		mOut = (Button) dialog.findViewById(R.id.bt_out);

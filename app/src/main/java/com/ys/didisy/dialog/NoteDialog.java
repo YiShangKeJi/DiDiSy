@@ -6,24 +6,25 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.RelativeLayout.LayoutParams;
 import android.widget.TextView;
+
 import com.ys.didisy.R;
 
 /**
- * 额外服务
+ * 备注信息（给司机捎句话）
  */
-public class ExtraServiceDialog implements OnClickListener {
+public class NoteDialog implements OnClickListener {
     private Context context;
     private Dialog dialog;
     private TextView tv_back;
 
 
-    public ExtraServiceDialog(Context context) {
+    public NoteDialog(Context context) {
         this.context = context;
         initView();
     }
 
     private void initView() {
-        dialog = BaseDialog.getIntence(context).getDialog(R.layout.dialog_extra_service,
+        dialog = BaseDialog.getIntence(context).getDialog(R.layout.dialog_note,
                 LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
         tv_back = (TextView) dialog.findViewById(R.id.tv_back);
         tv_back.setOnClickListener(this);

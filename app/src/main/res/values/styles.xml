@@ -137,4 +137,9 @@
     <style name="MyDialog" parent="@android:style/Theme.Holo.Light.Dialog">
         <item name="android:windowBackground">@color/mycolor</item>
     </style>
+    <!--底部弹出-->
+    <style name="bottom_anim" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/pop_enter_anim</item>
+        <item name="android:windowExitAnimation">@anim/pop_exit_anim</item>
+    </style>
 </resources>

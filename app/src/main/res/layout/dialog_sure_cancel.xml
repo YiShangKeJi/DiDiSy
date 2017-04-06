@@ -6,48 +6,44 @@
     android:background="@drawable/rectangle">
 
     <RelativeLayout
-        android:layout_width="500px"
+        android:layout_width="@dimen/x500"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="5px">
+        android:layout_margin="@dimen/x5">
 
         <TextView
             android:id="@+id/tv_dialog_info"
+            style="@style/text_ty"
             android:layout_width="match_parent"
-            android:layout_height="100px"
+            android:layout_height="@dimen/y100"
             android:layout_centerHorizontal="true"
-            android:gravity="center"
-            android:paddingTop="30px"
-            android:text="您确定要退出吗?"
-            android:textColor="@color/blanktitle"
-            android:textSize="30px" />
+            android:paddingTop="@dimen/y30"
+            android:text="您确定要退出吗?" />
 
         <Button
             android:id="@+id/bt_cancel_dialog"
-            android:layout_width="150px"
-            android:layout_height="80px"
+            style="@style/text_ty"
+            android:layout_width="@dimen/x150"
+            android:layout_height="@dimen/y80"
             android:layout_alignParentRight="true"
             android:layout_below="@+id/tv_dialog_info"
-            android:layout_margin="40px"
+            android:layout_margin="@dimen/x40"
             android:background="@drawable/rectangle"
-            android:text="取消"
-            android:textColor="@color/blanktitle"
-            android:textSize="30px" />
+            android:text="取消" />
 
         <Button
             android:id="@+id/bt_sure_dialog"
-            android:layout_width="150px"
-            android:layout_height="80px"
+            style="@style/text_ty"
+            android:layout_width="@dimen/x150"
+            android:layout_height="@dimen/y80"
             android:layout_below="@+id/tv_dialog_info"
-            android:layout_margin="40px"
+            android:layout_margin="@dimen/x40"
             android:background="@drawable/rectangle"
-            android:text="确定"
-            android:textColor="@color/blanktitle"
-            android:textSize="30px" />
+            android:text="确定" />
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="10px"
+            android:layout_height="@dimen/y20"
             android:layout_below="@+id/bt_sure_dialog" />
 
     </RelativeLayout>

@@ -25,7 +25,7 @@ public class SureCancelDialog implements OnClickListener {
     }
 
     public void initView() {
-        dialog = BaseDialog.getIntence(context).getDialog(context, R.layout.dialog_sure_cancel,
+        dialog = BaseDialog.getIntence(context).getDialog(R.layout.dialog_sure_cancel,
                 LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
         mSure = (Button) dialog.findViewById(R.id.bt_sure_dialog);
         mCancel = (Button) dialog.findViewById(R.id.bt_cancel_dialog);

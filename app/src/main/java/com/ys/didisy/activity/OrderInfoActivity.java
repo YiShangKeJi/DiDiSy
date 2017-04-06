@@ -7,9 +7,10 @@ import android.widget.TextView;
 
 import com.ys.didisy.R;
 import com.ys.didisy.dialog.ExtraServiceDialog;
+import com.ys.didisy.dialog.NoteDialog;
 import com.ys.didisy.dialog.ReceiveInfoDialog;
 import com.ys.didisy.dialog.SendInfoDialog;
-import com.ys.didisy.popupwindow.AppPopupWindow;
+import com.ys.didisy.popupwindow.BottomPopupWindow;
 
 
 public class OrderInfoActivity extends BaseActivity implements View.OnClickListener {
@@ -17,12 +18,16 @@ public class OrderInfoActivity extends BaseActivity implements View.OnClickListe
     private LinearLayout ll_location;
     private LinearLayout ll_destination;
     private LinearLayout ll_extra_service;
+    private LinearLayout ll_note;
 
     private TextView tv_back;
 
     private ExtraServiceDialog extraServiceDialog;
     private SendInfoDialog sendInfoDialog;
     private ReceiveInfoDialog receiveInfoDialog;
+    private NoteDialog noteDialog;
+
+    private BottomPopupWindow bottomPopupWindow;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +42,8 @@ public class OrderInfoActivity extends BaseActivity implements View.OnClickListe
         extraServiceDialog = new ExtraServiceDialog(this);
         sendInfoDialog = new SendInfoDialog(this);
         receiveInfoDialog = new ReceiveInfoDialog(this);
+        noteDialog = new NoteDialog(this);
+        bottomPopupWindow = new BottomPopupWindow(this);
     }
 
     private void init() {
@@ -48,6 +55,8 @@ public class OrderInfoActivity extends BaseActivity implements View.OnClickListe
         ll_location.setOnClickListener(this);
         ll_destination = (LinearLayout) findViewById(R.id.ll_destination);
         ll_destination.setOnClickListener(this);
+        ll_note = (LinearLayout) findViewById(R.id.ll_note);
+        ll_note.setOnClickListener(this);
         tv_back = (TextView) findViewById(R.id.tv_back);
         tv_back.setOnClickListener(this);
     }
@@ -62,13 +71,16 @@ public class OrderInfoActivity extends BaseActivity implements View.OnClickListe
                 extraServiceDialog.showDialog();
                 break;
             case R.id.ll_choose_date:
-                AppPopupWindow.showBottomPopupWindow(this);
+                bottomPopupWindow.showPopupWindow(ll_choose_date);
                 break;
             case R.id.ll_location:
                 sendInfoDialog.showDialog();
                 break;
             case R.id.ll_destination:
                 receiveInfoDialog.showDialog();
+                break;
+            case R.id.ll_note:
+                noteDialog.showDialog();
                 break;
         }
     }

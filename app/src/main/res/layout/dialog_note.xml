@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/fit_windows"
+    android:background="@color/gray"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y100"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_back"
+            style="@style/text_12"
+            android:layout_width="@dimen/y100"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="@drawable/left_jiantou" />
+
+        <TextView
+            style="@style/text_18"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:text="给司机捎句话" />
+    </RelativeLayout>
+
+    <EditText
+        style="@style/text_12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/x30"
+        android:background="@color/white"
+        android:gravity="left"
+        android:hint="您可以选择下方的类型、也可以自己输入备注信息"
+        android:maxHeight="@dimen/y300"
+        android:minHeight="@dimen/y200"
+        android:padding="@dimen/x10" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y200"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:padding="@dimen/x10">
+
+            <TextView
+                style="@style/text_12"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_marginRight="@dimen/x20"
+                android:layout_weight="1"
+                android:background="@drawable/rectangle"
+                android:text="需要装卸" />
+
+            <TextView
+                style="@style/text_12"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_marginRight="@dimen/x20"
+                android:layout_weight="1"
+                android:background="@drawable/rectangle"
+                android:text="需要装卸" />
+
+            <TextView
+                style="@style/text_12"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_marginRight="@dimen/x20"
+                android:layout_weight="1"
+                android:background="@drawable/rectangle"
+                android:text="需要装卸" />
+
+            <TextView
+                style="@style/text_12"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_marginRight="@dimen/x20"
+                android:layout_weight="1"
+                android:background="@drawable/rectangle"
+                android:text="需要装卸" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:padding="@dimen/x10">
+
+            <TextView
+                style="@style/text_12"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_marginRight="@dimen/x20"
+                android:layout_weight="1"
+                android:background="@drawable/rectangle"
+                android:text="需要装卸" />
+
+            <TextView
+                style="@style/text_12"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_marginRight="@dimen/x20"
+                android:layout_weight="1"
+                android:background="@drawable/rectangle"
+                android:text="需要装卸" />
+
+            <TextView
+                style="@style/text_12"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_marginRight="@dimen/x20"
+                android:layout_weight="1"
+                android:background="@drawable/rectangle"
+                android:text="需要装卸" />
+
+            <TextView
+                style="@style/text_12"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_marginRight="@dimen/x20"
+                android:layout_weight="1"
+                android:background="@drawable/rectangle"
+                android:text="需要装卸" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1">
+
+        <TextView
+            style="@style/text_18"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y100"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/x50"
+            android:background="@color/confirm"
+            android:text="确认" />
+    </RelativeLayout>
+
+</LinearLayout>
