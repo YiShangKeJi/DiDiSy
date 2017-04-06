@@ -10,24 +10,33 @@ import android.widget.TextView;
 import com.ys.didisy.R;
 
 /**
- * 收货信息
+ * 路线管理
  */
-public class ReceiveInfoDialog implements OnClickListener {
+public class ChooseRouteDialog implements OnClickListener {
     private Context context;
     private Dialog dialog;
     private TextView tv_back;
+    private TextView tv_add_route;
+    private AddRouteDialog addRouteDialog;
 
 
-    public ReceiveInfoDialog(Context context) {
+    public ChooseRouteDialog(Context context) {
         this.context = context;
         initView();
+        initData();
+    }
+
+    private void initData() {
+        addRouteDialog = new AddRouteDialog(context);
     }
 
     private void initView() {
-        dialog = BaseDialog.getIntence(context).getDialog(R.layout.dialog_receive_info,
+        dialog = BaseDialog.getIntence(context).getDialog(R.layout.dialog_choose_route,
                 LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
         tv_back = (TextView) dialog.findViewById(R.id.tv_back);
+        tv_add_route = (TextView) dialog.findViewById(R.id.tv_add_route);
         tv_back.setOnClickListener(this);
+        tv_add_route.setOnClickListener(this);
     }
 
     public void showDialog() {
@@ -39,6 +48,9 @@ public class ReceiveInfoDialog implements OnClickListener {
         switch (v.getId()) {
             case R.id.tv_back:
                 dialog.dismiss();
+                break;
+            case R.id.tv_add_route:
+                addRouteDialog.showDialog();
                 break;
             default:
                 break;

@@ -6,6 +6,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.ys.didisy.R;
+import com.ys.didisy.dialog.ChooseRouteDialog;
 import com.ys.didisy.dialog.ExtraServiceDialog;
 import com.ys.didisy.dialog.NoteDialog;
 import com.ys.didisy.dialog.ReceiveInfoDialog;
@@ -21,11 +22,13 @@ public class OrderInfoActivity extends BaseActivity implements View.OnClickListe
     private LinearLayout ll_note;
 
     private TextView tv_back;
+    private TextView tv_rote;
 
     private ExtraServiceDialog extraServiceDialog;
     private SendInfoDialog sendInfoDialog;
     private ReceiveInfoDialog receiveInfoDialog;
     private NoteDialog noteDialog;
+    private ChooseRouteDialog chooseRouteDialog;
 
     private BottomPopupWindow bottomPopupWindow;
 
@@ -44,6 +47,7 @@ public class OrderInfoActivity extends BaseActivity implements View.OnClickListe
         receiveInfoDialog = new ReceiveInfoDialog(this);
         noteDialog = new NoteDialog(this);
         bottomPopupWindow = new BottomPopupWindow(this);
+        chooseRouteDialog = new ChooseRouteDialog(this);
     }
 
     private void init() {
@@ -59,6 +63,8 @@ public class OrderInfoActivity extends BaseActivity implements View.OnClickListe
         ll_note.setOnClickListener(this);
         tv_back = (TextView) findViewById(R.id.tv_back);
         tv_back.setOnClickListener(this);
+        tv_rote = (TextView) findViewById(R.id.tv_rote);
+        tv_rote.setOnClickListener(this);
     }
 
     @Override
@@ -66,6 +72,9 @@ public class OrderInfoActivity extends BaseActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.tv_back:
                 finish();
+                break;
+            case R.id.tv_rote:
+                chooseRouteDialog.showDialog();
                 break;
             case R.id.ll_extra_service:
                 extraServiceDialog.showDialog();

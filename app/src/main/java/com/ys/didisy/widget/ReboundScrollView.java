@@ -167,6 +167,7 @@ public class ReboundScrollView extends ScrollView {
         //将标志位设回false
         canPullDown = false;
         canPullUp = false;
+
         isMoved = false;
     }
 
@@ -174,15 +175,17 @@ public class ReboundScrollView extends ScrollView {
      * 判断是否滚动到顶部
      */
     private boolean isCanPullDown() {
-        return getScrollY() == 0 ||
-                contentView.getHeight() < getHeight() + getScrollY();
+//        return getScrollY() == 0 ||
+//                contentView.getHeight() < getHeight() + getScrollY();
+        return true;
     }
 
     /**
      * 判断是否滚动到底部
      */
     private boolean isCanPullUp() {
-        return contentView.getHeight() <= getHeight() + getScrollY();
+//        return contentView.getHeight() <= getHeight() + getScrollY();
+        return true;
     }
 
 

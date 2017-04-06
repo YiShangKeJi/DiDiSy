@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/fit_windows"
+    android:background="@color/gray"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y100"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_back"
+            style="@style/text_ty"
+            android:layout_width="@dimen/y100"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="@drawable/left_jiantou" />
+
+        <TextView
+            style="@style/text_18"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:text="选择常用路线" />
+    </RelativeLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"></ListView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y100"
+        android:background="@color/confirm">
+
+        <TextView
+            android:id="@+id/tv_add_route"
+            style="@style/text_18"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:drawableLeft="@drawable/add_icon"
+            android:text="添加一个新路线"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+</LinearLayout>
