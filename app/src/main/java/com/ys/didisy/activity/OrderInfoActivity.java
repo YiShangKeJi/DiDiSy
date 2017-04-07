@@ -11,7 +11,7 @@ import com.ys.didisy.dialog.ExtraServiceDialog;
 import com.ys.didisy.dialog.NoteDialog;
 import com.ys.didisy.dialog.ReceiveInfoDialog;
 import com.ys.didisy.dialog.SendInfoDialog;
-import com.ys.didisy.popupwindow.BottomPopupWindow;
+import com.ys.didisy.popupwindow.ChooseDatePw;
 
 
 public class OrderInfoActivity extends BaseActivity implements View.OnClickListener {
@@ -30,7 +30,7 @@ public class OrderInfoActivity extends BaseActivity implements View.OnClickListe
     private NoteDialog noteDialog;
     private ChooseRouteDialog chooseRouteDialog;
 
-    private BottomPopupWindow bottomPopupWindow;
+    private ChooseDatePw chooseDatePw;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +46,7 @@ public class OrderInfoActivity extends BaseActivity implements View.OnClickListe
         sendInfoDialog = new SendInfoDialog(this);
         receiveInfoDialog = new ReceiveInfoDialog(this);
         noteDialog = new NoteDialog(this);
-        bottomPopupWindow = new BottomPopupWindow(this);
+        chooseDatePw = new ChooseDatePw(this);
         chooseRouteDialog = new ChooseRouteDialog(this);
     }
 
@@ -80,7 +80,7 @@ public class OrderInfoActivity extends BaseActivity implements View.OnClickListe
                 extraServiceDialog.showDialog();
                 break;
             case R.id.ll_choose_date:
-                bottomPopupWindow.showPopupWindow(ll_choose_date);
+                chooseDatePw.showPopupWindow(ll_choose_date);
                 break;
             case R.id.ll_location:
                 sendInfoDialog.showDialog();

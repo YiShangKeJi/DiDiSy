@@ -8,11 +8,11 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/y100"
-        android:background="@color/gray">
+        android:background="@color/yellow_bright">
 
         <TextView
             android:id="@+id/textView2"
-            style="@style/text_14"
+            style="@style/text_ty"
             android:layout_width="@dimen/x100"
             android:layout_height="match_parent"
             android:layout_centerVertical="true"
@@ -21,7 +21,7 @@
 
         <TextView
             android:id="@+id/tv_map"
-            style="@style/text_14"
+            style="@style/text_ty"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_toRightOf="@+id/textView2"
@@ -30,7 +30,7 @@
             android:text="附近有100辆货车可提供服务" />
     </RelativeLayout>
 
-    <ScrollView
+    <com.ys.didisy.widget.ReboundScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="none">
@@ -44,43 +44,338 @@
             <LinearLayout
                 android:id="@+id/ll_small"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/y250"
+                android:layout_height="@dimen/y220"
                 android:layout_margin="@dimen/x10"
                 android:background="@drawable/rectangle"
                 android:orientation="horizontal">
 
+                <ImageView
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@color/gray" />
+
+                <LinearLayout
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:orientation="vertical"
+                    android:padding="@dimen/x10">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0px"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/text_18"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="小型面包" />
+
+                        <TextView
+                            style="@style/text_18"
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center|right"
+                            android:text="35"
+                            android:textColor="@color/red" />
+
+                        <TextView
+                            style="@style/text_14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center|right"
+                            android:text="元(5公里)" />
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/text_14"
+                        android:layout_width="match_parent"
+                        android:layout_height="0px"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="载重：0.8吨" />
+
+                    <TextView
+                        style="@style/text_14"
+                        android:layout_width="match_parent"
+                        android:layout_height="0px"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="长*宽*高：1.7*1.1*1m" />
+
+                    <TextView
+                        style="@style/text_14"
+                        android:layout_width="match_parent"
+                        android:layout_height="0px"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="超公里费：3.0元/公里" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="@dimen/x20"
+                    android:layout_height="@dimen/x30"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/x10"
+                    android:background="@drawable/right_jiantou" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/ll_middle"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/y250"
+                android:layout_height="@dimen/y220"
                 android:layout_margin="@dimen/x10"
                 android:background="@drawable/rectangle"
                 android:orientation="horizontal">
 
+                <ImageView
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@color/gray" />
+
+                <LinearLayout
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:orientation="vertical"
+                    android:padding="@dimen/x10">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0px"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/text_18"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="入城金杯" />
+
+                        <TextView
+                            style="@style/text_18"
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center|right"
+                            android:text="60"
+                            android:textColor="@color/red" />
+
+                        <TextView
+                            style="@style/text_14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center|right"
+                            android:text="元(5公里)" />
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/text_14"
+                        android:layout_width="match_parent"
+                        android:layout_height="0px"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="载重：0.8吨" />
+
+                    <TextView
+                        style="@style/text_14"
+                        android:layout_width="match_parent"
+                        android:layout_height="0px"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="长*宽*高：2.7*1.4*1.2m" />
+
+                    <TextView
+                        style="@style/text_14"
+                        android:layout_width="match_parent"
+                        android:layout_height="0px"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="超公里费：4.0元/公里" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="@dimen/x20"
+                    android:layout_height="@dimen/x30"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/x10"
+                    android:background="@drawable/right_jiantou" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/ll_big"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/y250"
+                android:layout_height="@dimen/y220"
                 android:layout_margin="@dimen/x10"
                 android:background="@drawable/rectangle"
                 android:orientation="horizontal">
 
+                <ImageView
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@color/gray" />
+
+                <LinearLayout
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:orientation="vertical"
+                    android:padding="@dimen/x10">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0px"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/text_18"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="厢货车" />
+
+                        <TextView
+                            style="@style/text_18"
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center|right"
+                            android:text="120"
+                            android:textColor="@color/red" />
+
+                        <TextView
+                            style="@style/text_14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center|right"
+                            android:text="元(5公里)" />
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/text_14"
+                        android:layout_width="match_parent"
+                        android:layout_height="0px"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="载重：2吨" />
+
+                    <TextView
+                        style="@style/text_14"
+                        android:layout_width="match_parent"
+                        android:layout_height="0px"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="长*宽*高：4.2*2*1.8m" />
+
+                    <TextView
+                        style="@style/text_14"
+                        android:layout_width="match_parent"
+                        android:layout_height="0px"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="超公里费：5.0元/公里" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="@dimen/x20"
+                    android:layout_height="@dimen/x30"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/x10"
+                    android:background="@drawable/right_jiantou" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/ll_most"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/y250"
+                android:layout_height="@dimen/y220"
                 android:layout_margin="@dimen/x10"
                 android:background="@drawable/rectangle"
                 android:orientation="horizontal">
 
-            </LinearLayout>
+                <ImageView
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@color/gray" />
 
+                <LinearLayout
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:orientation="vertical"
+                    android:padding="@dimen/x10">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0px"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/text_18"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="大型平板" />
+
+                        <TextView
+                            style="@style/text_18"
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center|right"
+                            android:text="100"
+                            android:textColor="@color/red" />
+
+                        <TextView
+                            style="@style/text_14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center|right"
+                            android:text="元(5公里)" />
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/text_14"
+                        android:layout_width="match_parent"
+                        android:layout_height="0px"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="载重：2吨" />
+
+                    <TextView
+                        style="@style/text_14"
+                        android:layout_width="match_parent"
+                        android:layout_height="0px"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="长*宽*高：5.0*1.4*1.4m" />
+
+                    <TextView
+                        style="@style/text_14"
+                        android:layout_width="match_parent"
+                        android:layout_height="0px"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="超公里费：6.0元/公里" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="@dimen/x20"
+                    android:layout_height="@dimen/x30"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/x10"
+                    android:background="@drawable/right_jiantou" />
+            </LinearLayout>
         </LinearLayout>
-    </ScrollView>
+    </com.ys.didisy.widget.ReboundScrollView>
 </LinearLayout>

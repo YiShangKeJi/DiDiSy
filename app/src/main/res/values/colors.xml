@@ -27,4 +27,5 @@
     <color name="font">#333333</color>
     <color name="red">#FF0000</color>
     <color name="mycolor">#00000000</color>
+    <color name="yellow_bright">#f6efd2</color>
 </resources>
