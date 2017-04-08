@@ -7,18 +7,18 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/y100"
-        android:background="@color/white">
+        android:background="@color/colorTheme">
 
         <TextView
             android:id="@+id/tv_back"
-            style="@style/text_12"
+            style="@style/text_14"
             android:layout_width="@dimen/y100"
             android:layout_height="match_parent"
             android:layout_centerVertical="true"
             android:background="@drawable/left_jiantou" />
 
         <TextView
-            style="@style/text_18"
+            style="@style/text_title"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_centerInParent="true"
@@ -26,16 +26,16 @@
     </RelativeLayout>
 
     <EditText
-        style="@style/text_12"
+        style="@style/text_14"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/x30"
         android:background="@color/white"
         android:gravity="left"
         android:hint="您可以选择下方的类型、也可以自己输入备注信息"
-        android:maxHeight="@dimen/y300"
-        android:minHeight="@dimen/y200"
-        android:padding="@dimen/x10" />
+        android:maxHeight="@dimen/y400"
+        android:minHeight="@dimen/y300"
+        android:padding="@dimen/x20" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -50,44 +50,44 @@
             android:padding="@dimen/x10">
 
             <TextView
-                style="@style/text_12"
+                style="@style/text_14"
                 android:layout_width="0px"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="@dimen/x20"
                 android:layout_marginRight="@dimen/x20"
                 android:layout_weight="1"
                 android:background="@drawable/rectangle"
-                android:text="需要装卸" />
+                android:text="生鲜蔬菜" />
 
             <TextView
-                style="@style/text_12"
+                style="@style/text_14"
                 android:layout_width="0px"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="@dimen/x20"
                 android:layout_marginRight="@dimen/x20"
                 android:layout_weight="1"
                 android:background="@drawable/rectangle"
-                android:text="需要装卸" />
+                android:text="食品" />
 
             <TextView
-                style="@style/text_12"
+                style="@style/text_14"
                 android:layout_width="0px"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="@dimen/x20"
                 android:layout_marginRight="@dimen/x20"
                 android:layout_weight="1"
                 android:background="@drawable/rectangle"
-                android:text="需要装卸" />
+                android:text="电子产品" />
 
             <TextView
-                style="@style/text_12"
+                style="@style/text_14"
                 android:layout_width="0px"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="@dimen/x20"
                 android:layout_marginRight="@dimen/x20"
                 android:layout_weight="1"
                 android:background="@drawable/rectangle"
-                android:text="需要装卸" />
+                android:text="建材" />
         </LinearLayout>
 
         <LinearLayout
@@ -98,44 +98,44 @@
             android:padding="@dimen/x10">
 
             <TextView
-                style="@style/text_12"
+                style="@style/text_14"
                 android:layout_width="0px"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="@dimen/x20"
                 android:layout_marginRight="@dimen/x20"
                 android:layout_weight="1"
                 android:background="@drawable/rectangle"
-                android:text="需要装卸" />
+                android:text="家具" />
 
             <TextView
-                style="@style/text_12"
+                style="@style/text_14"
                 android:layout_width="0px"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="@dimen/x20"
                 android:layout_marginRight="@dimen/x20"
                 android:layout_weight="1"
                 android:background="@drawable/rectangle"
-                android:text="需要装卸" />
+                android:text="服装" />
 
             <TextView
-                style="@style/text_12"
+                style="@style/text_14"
                 android:layout_width="0px"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="@dimen/x20"
                 android:layout_marginRight="@dimen/x20"
                 android:layout_weight="1"
                 android:background="@drawable/rectangle"
-                android:text="需要装卸" />
+                android:text="配件" />
 
             <TextView
-                style="@style/text_12"
+                style="@style/text_14"
                 android:layout_width="0px"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="@dimen/x20"
                 android:layout_marginRight="@dimen/x20"
                 android:layout_weight="1"
                 android:background="@drawable/rectangle"
-                android:text="需要装卸" />
+                android:text="其他" />
         </LinearLayout>
     </LinearLayout>
 
@@ -145,13 +145,13 @@
         android:layout_weight="1">
 
         <TextView
-            style="@style/text_18"
+            style="@style/button_ty"
             android:layout_width="match_parent"
             android:layout_height="@dimen/y100"
             android:layout_alignParentBottom="true"
             android:layout_margin="@dimen/x50"
-            android:background="@color/confirm"
-            android:text="确认" />
+            android:text="确认"
+            android:textColor="@color/white" />
     </RelativeLayout>
 
 </LinearLayout>

@@ -6,11 +6,18 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
-
 import com.ys.didisy.R;
 import com.ys.didisy.adapter.TyViewPagerAdapter;
 import com.ys.didisy.constant.Constant;
+import com.ys.didisy.dialog.AboutUsDialog;
+import com.ys.didisy.dialog.CallCenterDialog;
+import com.ys.didisy.dialog.ChooseRouteDialog;
+import com.ys.didisy.dialog.FeeScaleDialog;
+import com.ys.didisy.dialog.InviteFriendDialog;
+import com.ys.didisy.dialog.ManageRouteDialog;
+import com.ys.didisy.dialog.OutDialog;
 import com.ys.didisy.dialog.SureCancelDialog;
+import com.ys.didisy.dialog.UserAgreementDialog;
 import com.ys.didisy.fragment.PersonFragment;
 import com.ys.didisy.fragment.OrderFragment;
 import com.ys.didisy.fragment.ActivityFragment;
@@ -27,7 +34,6 @@ import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -44,7 +50,7 @@ import java.util.List;
 /**
  * Created by Administrator on 2017/img3/6.
  */
-public class MainActivity extends BaseFragmentActivity implements OnCheckedChangeListener,View.OnClickListener {
+public class MainActivity extends BaseFragmentActivity implements OnCheckedChangeListener, View.OnClickListener {
     private OrderFragment orderFragment;
     private ManageFragment manageFragment;
     private ActivityFragment activityFragment;
@@ -58,72 +64,100 @@ public class MainActivity extends BaseFragmentActivity implements OnCheckedChang
     private DrawerLayout activity_main;
     private LinearLayout menuLayout;
     private FormerCircleImageView useerImage;
-    private ImageView my_on;
     private FormerCircleImageView menu_userImage;
-    private LinearLayout my_Route,invite_Friends,fee_Scale,user_Agreement,about_Us,call_Center;
+    private LinearLayout my_Route, invite_Friends, fee_Scale, user_Agreement, about_Us, call_Center;
+    private TextView tv_sign_out;
     private Bitmap photodata;
     private String path;
+    //侧滑页功能dialog
+    private ManageRouteDialog manageRouteDialog;
+    private InviteFriendDialog inviteFriendDialog;
+    private FeeScaleDialog feeScaleDialog;
+    private UserAgreementDialog userAgreementDialog;
+    private AboutUsDialog aboutUsDialog;
+    private CallCenterDialog callCenterDialog;
+    private OutDialog outDialog;
+    //
+
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initView();//布局初始化
         initLogic();//逻辑处理
+        initData();//数据初始化
+    }
+
+    private void initData() {
+        //侧滑页功能dialog
+        manageRouteDialog = new ManageRouteDialog(this);
+        inviteFriendDialog = new InviteFriendDialog(this);
+        feeScaleDialog = new FeeScaleDialog(this);
+        userAgreementDialog = new UserAgreementDialog(this);
+        aboutUsDialog = new AboutUsDialog(this);
+        callCenterDialog = new CallCenterDialog(this);
+        outDialog = new OutDialog(this);
+        //
     }
 
     private void initView() {
         sureCancelDialog = new SureCancelDialog(this);//程序退出询问框
-        useerImage = (FormerCircleImageView)findViewById(R.id.imageTouxiang);//用户头像
+        useerImage = (FormerCircleImageView) findViewById(R.id.imageTouxiang);//用户头像
         group = (RadioGroup) findViewById(R.id.rg_main);
-        title = (TextView)findViewById(R.id.title);//标题
+        title = (TextView) findViewById(R.id.title);//标题
         activity_main = (DrawerLayout) findViewById(R.id.activity_main);
-        my_on = (ImageView) findViewById(R.id.my_on);
 //        activity_main.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);//侧滑手势关闭
         menuLayout = (LinearLayout) findViewById(R.id.fragment_person); // 侧滑布局
         initViewMenu();//侧滑布局初始化
         vp_manage = (ViewPager) findViewById(R.id.vp_manage_mian); //初始化Fragment
     }
-   private void initViewMenu(){
-       menu_userImage  = (FormerCircleImageView)findViewById(R.id.imgUser);
-       my_Route = (LinearLayout) findViewById(R.id.my_Route);
-       invite_Friends = (LinearLayout) findViewById(R.id.invite_Friends);
-       fee_Scale = (LinearLayout) findViewById(R.id.fee_Scale);
-       user_Agreement = (LinearLayout) findViewById(R.id.user_Agreement);
-       about_Us = (LinearLayout) findViewById(R.id.about_Us);
-       call_Center = (LinearLayout) findViewById(R.id.call_Center);
-       menu_userImage.setOnClickListener(this);
-       my_Route.setOnClickListener(this);
-       invite_Friends.setOnClickListener(this);
-       fee_Scale.setOnClickListener(this);
-       user_Agreement.setOnClickListener(this);
-       about_Us.setOnClickListener(this);
-       call_Center.setOnClickListener(this);
 
+    private void initViewMenu() {
+        menu_userImage = (FormerCircleImageView) findViewById(R.id.imgUser);
+        my_Route = (LinearLayout) findViewById(R.id.my_Route);
+        invite_Friends = (LinearLayout) findViewById(R.id.invite_Friends);
+        fee_Scale = (LinearLayout) findViewById(R.id.fee_Scale);
+        user_Agreement = (LinearLayout) findViewById(R.id.user_Agreement);
+        about_Us = (LinearLayout) findViewById(R.id.about_Us);
+        call_Center = (LinearLayout) findViewById(R.id.call_Center);
+        tv_sign_out = (TextView) findViewById(R.id.tv_sign_out);
+        tv_sign_out.setOnClickListener(this);
+        menu_userImage.setOnClickListener(this);
+        my_Route.setOnClickListener(this);
+        invite_Friends.setOnClickListener(this);
+        fee_Scale.setOnClickListener(this);
+        user_Agreement.setOnClickListener(this);
+        about_Us.setOnClickListener(this);
+        call_Center.setOnClickListener(this);
+    }
 
-   }
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.imgUser:
                 setUserImage();
                 break;
             case R.id.my_Route:
-                startActivity(new Intent(MainActivity.this,MyRouteActivity.class));
+                manageRouteDialog.showDialog();
                 break;
             case R.id.invite_Friends:
-                startActivity(new Intent(MainActivity.this,InviteFriendsActivity.class));
+                inviteFriendDialog.showDialog();
                 break;
             case R.id.fee_Scale:
-                startActivity(new Intent(MainActivity.this,FeeScaleActivity.class));
+                feeScaleDialog.showDialog();
                 break;
             case R.id.user_Agreement:
-                startActivity(new Intent(MainActivity.this,UserAgreementActivity.class));
+                userAgreementDialog.showDialog();
                 break;
             case R.id.about_Us:
-                startActivity(new Intent(MainActivity.this,AboutUsActivity.class));
+                aboutUsDialog.showDialog();
                 break;
             case R.id.call_Center:
-                startActivity(new Intent(MainActivity.this,CallCenterActivity.class));
+                callCenterDialog.showDialog();
+                break;
+            case R.id.tv_sign_out:
+                outDialog.showDialog();
                 break;
             default:
                 break;
@@ -131,14 +165,15 @@ public class MainActivity extends BaseFragmentActivity implements OnCheckedChang
         }
 
     }
+
     /**
      * 逻辑处理
      */
-    private void initLogic(){
+    private void initLogic() {
         useerImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(activity_main!=null&&menuLayout!=null){
+                if (activity_main != null && menuLayout != null) {
                     //侧滑界面打开
                     activity_main.openDrawer(menuLayout);
                 }
@@ -171,18 +206,13 @@ public class MainActivity extends BaseFragmentActivity implements OnCheckedChang
             @Override
             public void onPageSelected(int position) {
                 ((RadioButton) group.getChildAt(position)).setChecked(true);
-                if(position==0){
+                if (position == 0) {
                     title.setText("下单");
-                    my_on.setVisibility(View.VISIBLE);
-                }else if(position==1){
+                } else if (position == 1) {
                     title.setText("订单管理");
-                    my_on.setVisibility(View.GONE);
-                }
-                else if(position==2){
+                } else if (position == 2) {
                     title.setText("优惠活动");
-                    my_on.setVisibility(View.GONE);
-                }
-                else{
+                } else {
                     title.setText("我的");
                 }
             }
@@ -193,9 +223,11 @@ public class MainActivity extends BaseFragmentActivity implements OnCheckedChang
             }
         });
     }
+
     int selected;
-    public void setUserImage(){
-        String[] str = { "拍照", "从手机相册选择" };
+
+    public void setUserImage() {
+        String[] str = {"拍照", "从手机相册选择"};
         new AlertDialog.Builder(MainActivity.this, R.style.MyDialog)
                 .setTitle("请选择")
                 .setSingleChoiceItems(str, selected,
@@ -253,6 +285,7 @@ public class MainActivity extends BaseFragmentActivity implements OnCheckedChang
                         }).create().show();
 
     }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -264,7 +297,7 @@ public class MainActivity extends BaseFragmentActivity implements OnCheckedChang
             if (!f.exists()) {
                 return;
             }
-           // upload();
+            // upload();
             // 三星以外的手机可以通过resultCode判断是否录像
         } else if (resultCode == RESULT_OK) {
             switch (requestCode) {
@@ -273,8 +306,8 @@ public class MainActivity extends BaseFragmentActivity implements OnCheckedChang
                     if (data != null) {
                         Uri uri1 = data.getData();
                         path = getpath(uri1);
-                       //上传图片upload();
-                        photodata=BitmapUtil.getScaleBitmap(MainActivity.this, path);
+                        //上传图片upload();
+                        photodata = BitmapUtil.getScaleBitmap(MainActivity.this, path);
                         menu_userImage.setImageBitmap(photodata);
                         useerImage.setImageBitmap(photodata);
                     } else {
@@ -285,7 +318,7 @@ public class MainActivity extends BaseFragmentActivity implements OnCheckedChang
                 case 2:// 拍照
                     try {
                         //上传图片upload();
-                        photodata= BitmapUtil.getScaleBitmap(MainActivity.this, path);
+                        photodata = BitmapUtil.getScaleBitmap(MainActivity.this, path);
                         menu_userImage.setImageBitmap(photodata);
                         useerImage.setImageBitmap(photodata);
                     } catch (Exception e) {
@@ -299,6 +332,7 @@ public class MainActivity extends BaseFragmentActivity implements OnCheckedChang
             }
         }
     }
+
     // 销毁图片文件
     private void destoryBitmap() {
         if (photodata != null && !photodata.isRecycled()) {
@@ -306,6 +340,7 @@ public class MainActivity extends BaseFragmentActivity implements OnCheckedChang
             photodata = null;
         }
     }
+
     public Uri savePhoto() {
         String saveDir = Environment.getExternalStorageDirectory() + "/images";
         File sdir = new File(saveDir);
@@ -322,11 +357,13 @@ public class MainActivity extends BaseFragmentActivity implements OnCheckedChang
         Uri uri = Uri.fromFile(file);
         return uri;
     }
+
     public String getpath(Uri uri) {
         String filepath = null;
         filepath = MeadUtil.getPath(this, uri);
         return filepath;
     }
+
     @Override
     public void onCheckedChanged(RadioGroup group, int id) {
         switch (id) {

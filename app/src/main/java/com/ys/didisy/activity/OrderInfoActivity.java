@@ -9,6 +9,7 @@ import com.ys.didisy.R;
 import com.ys.didisy.dialog.ChooseRouteDialog;
 import com.ys.didisy.dialog.ExtraServiceDialog;
 import com.ys.didisy.dialog.NoteDialog;
+import com.ys.didisy.dialog.OrderAffirmDialog;
 import com.ys.didisy.dialog.ReceiveInfoDialog;
 import com.ys.didisy.dialog.SendInfoDialog;
 import com.ys.didisy.popupwindow.ChooseDatePw;
@@ -23,12 +24,14 @@ public class OrderInfoActivity extends BaseActivity implements View.OnClickListe
 
     private TextView tv_back;
     private TextView tv_rote;
+    private TextView tv_next;
 
     private ExtraServiceDialog extraServiceDialog;
     private SendInfoDialog sendInfoDialog;
     private ReceiveInfoDialog receiveInfoDialog;
     private NoteDialog noteDialog;
     private ChooseRouteDialog chooseRouteDialog;
+    private OrderAffirmDialog orderAffirmDialog;
 
     private ChooseDatePw chooseDatePw;
 
@@ -48,6 +51,7 @@ public class OrderInfoActivity extends BaseActivity implements View.OnClickListe
         noteDialog = new NoteDialog(this);
         chooseDatePw = new ChooseDatePw(this);
         chooseRouteDialog = new ChooseRouteDialog(this);
+        orderAffirmDialog = new OrderAffirmDialog(this);
     }
 
     private void init() {
@@ -65,6 +69,8 @@ public class OrderInfoActivity extends BaseActivity implements View.OnClickListe
         tv_back.setOnClickListener(this);
         tv_rote = (TextView) findViewById(R.id.tv_rote);
         tv_rote.setOnClickListener(this);
+        tv_next = (TextView) findViewById(R.id.tv_next);
+        tv_next.setOnClickListener(this);
     }
 
     @Override
@@ -90,6 +96,9 @@ public class OrderInfoActivity extends BaseActivity implements View.OnClickListe
                 break;
             case R.id.ll_note:
                 noteDialog.showDialog();
+                break;
+            case R.id.tv_next:
+                orderAffirmDialog.showDialog();
                 break;
         }
     }

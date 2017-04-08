@@ -26,7 +26,7 @@
 
     <style name="text_ty">
         <item name="android:textColor">@color/font</item>
-        <item name="android:textSize">@dimen/s15</item>
+        <item name="android:textSize">@dimen/s16</item>
         <item name="android:gravity">center</item>
 
     </style>
@@ -81,7 +81,7 @@
     </style>
 
     <style name="text_title">
-        <item name="android:textColor">@color/white</item>
+        <item name="android:textColor">@color/font</item>
         <item name="android:textSize">@dimen/s18</item>
         <item name="android:gravity">center</item>
     </style>
@@ -89,8 +89,8 @@
     <style name="fit_windows">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
-        <item name="android:clipToPadding">true</item>
-        <item name="android:fitsSystemWindows">true</item>
+       <!-- <item name="android:clipToPadding">true</item>
+        <item name="android:fitsSystemWindows">true</item>-->
     </style>
 
     <style name="main_radio_button">
@@ -141,5 +141,12 @@
     <style name="bottom_anim" parent="android:Animation">
         <item name="android:windowEnterAnimation">@anim/pop_enter_anim</item>
         <item name="android:windowExitAnimation">@anim/pop_exit_anim</item>
+    </style>
+
+    <style name="button_ty">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/s18</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/next_button</item>
     </style>
 </resources>

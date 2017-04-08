@@ -7,7 +7,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/y100"
-        android:background="@color/white">
+        android:background="@color/colorTheme">
 
         <TextView
             android:id="@+id/tv_back"
@@ -476,11 +476,11 @@
             </LinearLayout>
 
             <TextView
-                style="@style/text_18"
+                android:id="@+id/tv_next"
+                style="@style/button_ty"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/y100"
                 android:layout_margin="@dimen/y50"
-                android:background="@color/button_yellow"
                 android:text="下一步" />
         </LinearLayout>
     </com.ys.didisy.widget.ReboundScrollView>

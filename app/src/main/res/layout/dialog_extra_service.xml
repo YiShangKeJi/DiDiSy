@@ -7,7 +7,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/y100"
-        android:background="@color/white">
+        android:background="@color/colorTheme">
 
         <TextView
             android:id="@+id/tv_back"
@@ -18,7 +18,7 @@
             android:background="@drawable/left_jiantou" />
 
         <TextView
-            style="@style/text_18"
+            style="@style/text_title"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_centerInParent="true"
@@ -160,12 +160,11 @@
         android:layout_weight="1">
 
         <TextView
-            style="@style/text_18"
+            style="@style/button_ty"
             android:layout_width="match_parent"
             android:layout_height="@dimen/y100"
             android:layout_alignParentBottom="true"
             android:layout_margin="@dimen/x50"
-            android:background="@color/confirm"
             android:text="确认" />
     </RelativeLayout>
 

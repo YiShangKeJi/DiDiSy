@@ -28,7 +28,7 @@ import com.baidu.mapapi.map.MyLocationData;
 import com.baidu.mapapi.map.OverlayOptions;
 import com.baidu.mapapi.model.LatLng;
 import com.ys.didisy.R;
-import com.ys.didisy.bean.OwnerInfor;
+import com.ys.didisy.model.OwnerInfor;
 
 import java.util.ArrayList;
 import java.util.List;

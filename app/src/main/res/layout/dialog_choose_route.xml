@@ -7,7 +7,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/y100"
-        android:background="@color/white">
+        android:background="@color/colorTheme">
 
         <TextView
             android:id="@+id/tv_back"
@@ -18,11 +18,21 @@
             android:background="@drawable/left_jiantou" />
 
         <TextView
-            style="@style/text_18"
+            style="@style/text_title"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_centerInParent="true"
             android:text="选择常用路线" />
+
+        <TextView
+            android:id="@+id/tv_manager"
+            style="@style/text_title"
+            android:layout_width="@dimen/y100"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/x10"
+            android:text="管理"
+            android:textColor="@color/red" />
     </RelativeLayout>
 
     <ListView

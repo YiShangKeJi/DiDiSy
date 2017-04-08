@@ -1,4 +1,4 @@
-package com.ys.didisy.bean;
+package com.ys.didisy.model;
 
 import com.baidu.mapapi.model.LatLng;
 

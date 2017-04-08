@@ -136,7 +136,7 @@ public class ManageFragment extends Fragment implements View.OnClickListener {
         tv_service.setTextColor(Color.BLACK);
         tv_evaluate.setTextColor(Color.BLACK);
         tv_cancel.setTextColor(Color.BLACK);
-        textView.setTextColor(getResources().getColor(R.color.zise));
+        textView.setTextColor(getResources().getColor(R.color.button_yellow));
     }
 
 }

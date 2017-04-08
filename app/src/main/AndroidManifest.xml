@@ -27,13 +27,6 @@
         <activity android:name="com.ys.didisy.activity.MapActivity"></activity>
         <activity android:name="com.ys.didisy.activity.OrderInfoActivity"></activity>
 
-        <activity android:name="com.ys.didisy.activity.MyRouteActivity"></activity>
-        <activity android:name="com.ys.didisy.activity.InviteFriendsActivity"></activity>
-        <activity android:name="com.ys.didisy.activity.FeeScaleActivity"></activity>
-        <activity android:name="com.ys.didisy.activity.UserAgreementActivity"></activity>
-        <activity android:name="com.ys.didisy.activity.AboutUsActivity"></activity>
-        <activity android:name="com.ys.didisy.activity.CallCenterActivity"></activity>
-
     </application>
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />

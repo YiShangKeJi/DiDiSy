@@ -3,165 +3,190 @@
     android:id="@+id/fragment_person"
     android:layout_width="@dimen/x600"
     android:layout_height="match_parent"
-    android:background="@color/gray"
-    android:orientation="vertical"
-    android:clickable="true"
     android:layout_gravity="start"
-    android:scrollbars="none">
+    android:background="@color/gray"
+    android:clickable="true"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/confirm"
+        android:orientation="vertical">
+
+        <com.ys.didisy.widget.FormerCircleImageView
+            android:id="@+id/imgUser"
+            style="@style/Moren_touxiang"
+            android:layout_width="@dimen/y120"
+            android:layout_height="@dimen/y120"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/y60" />
+
+        <TextView
+            android:id="@+id/tv_phone"
+            style="@style/text_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y100"
+            android:gravity="center"
+            android:text="18712653954"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y140"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="@dimen/x10">
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_balance"
+                    style="@style/text_20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:paddingRight="@dimen/x6"
+                    android:text="0.0"
+                    android:textColor="@color/red" />
+
+                <TextView
+                    style="@style/text_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/y50"
+                    android:layout_toRightOf="@+id/tv_balance"
+                    android:gravity="center|bottom"
+                    android:text="元" />
+            </RelativeLayout>
+
+            <TextView
+                style="@style/text_12"
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="我的余额" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/x2"
+            android:layout_height="match_parent"
+            android:background="@color/gray"></View>
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="1"
+                android:gravity="center|bottom">
+
+                <TextView
+                    android:id="@+id/tv_coupon"
+                    style="@style/text_20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:paddingRight="@dimen/x6"
+                    android:text="1"
+                    android:textColor="@color/red" />
+
+                <TextView
+                    style="@style/text_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/y50"
+                    android:layout_toRightOf="@+id/tv_coupon"
+                    android:gravity="center|bottom"
+                    android:text="张" />
+            </RelativeLayout>
+
+            <TextView
+                style="@style/text_12"
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="我的优惠券" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/x2"
+            android:layout_height="match_parent"
+            android:background="@color/gray"></View>
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="1"
+                android:gravity="center|bottom">
+
+                <TextView
+                    android:id="@+id/tv_integral"
+                    style="@style/text_20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:paddingRight="@dimen/x6"
+                    android:text="0"
+                    android:textColor="@color/red" />
+
+                <TextView
+                    style="@style/text_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/y50"
+                    android:layout_toRightOf="@+id/tv_integral"
+                    android:gravity="center|bottom"
+                    android:text="分" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/textView4"
+                style="@style/text_12"
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="我的积分" />
+        </LinearLayout>
+    </LinearLayout>
+
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray"
         android:orientation="vertical"
         android:scrollbars="none">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
-            <com.ys.didisy.widget.FormerCircleImageView
-                android:id="@+id/imgUser"
-                style="@style/Moren_touxiang"
-                android:layout_width="@dimen/y100"
-                android:layout_height="@dimen/y100"
-                android:layout_gravity="center"
-                android:layout_marginTop="@dimen/y100"
-                />
-            <TextView
-                android:id="@+id/tv_phone"
-                style="@style/text_title"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/y100"
-                android:gravity="center"
-                android:text="1888888888"
-                android:textColor="@color/black" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/y140"
-                android:background="@color/white"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="0px"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="0px"
-                        android:layout_marginTop="@dimen/y20"
-                        android:layout_weight="1"
-                        android:gravity="center|bottom">
-
-                        <TextView
-                            android:id="@+id/tv_balance"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:gravity="center"
-                            android:text="0.0"
-                            android:textSize="20sp" />
-
-                        <TextView
-                            style="@style/text_12"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_toRightOf="@+id/tv_balance"
-                            android:gravity="center"
-                            android:text="元" />
-                    </RelativeLayout>
-
-                    <TextView
-                        style="@style/text_12"
-                        android:layout_width="match_parent"
-                        android:layout_height="0px"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="我的余额" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0px"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="0px"
-                        android:layout_marginTop="@dimen/y20"
-                        android:layout_weight="1"
-                        android:gravity="center|bottom">
-
-                        <TextView
-                            android:id="@+id/tv_coupon"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:gravity="center"
-                            android:text="1"
-                            android:textSize="20sp" />
-
-                        <TextView
-                            style="@style/text_12"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_toRightOf="@+id/tv_coupon"
-                            android:gravity="center"
-                            android:text="张" />
-                    </RelativeLayout>
-
-                    <TextView
-                        style="@style/text_12"
-                        android:layout_width="match_parent"
-                        android:layout_height="0px"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="我的优惠券" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0px"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="0px"
-                        android:layout_marginTop="@dimen/y20"
-                        android:layout_weight="1"
-                        android:gravity="center|bottom">
-
-                        <TextView
-                            android:id="@+id/tv_integral"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:gravity="center"
-                            android:text="0"
-                            android:textSize="20sp" />
-
-                        <TextView
-                            style="@style/text_12"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_toRightOf="@+id/tv_integral"
-                            android:gravity="center"
-                            android:text="分" />
-                    </RelativeLayout>
-
-                    <TextView
-                        android:id="@+id/textView4"
-                        style="@style/text_12"
-                        android:layout_width="match_parent"
-                        android:layout_height="0px"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="我的积分" />
-                </LinearLayout>
-            </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/my_Route"
@@ -181,14 +206,14 @@
                     android:paddingLeft="30px" />
 
                 <TextView
-                    style="@style/text_14"
+                    android:id="@+id/textView5"
+                    style="@style/text_ty"
                     android:layout_width="0px"
                     android:layout_height="match_parent"
                     android:layout_weight="5"
                     android:gravity="center_vertical"
                     android:paddingLeft="30px"
-                    android:text="我的常用路线"
-                    android:id="@+id/textView5" />
+                    android:text="我的常用路线" />
 
                 <TextView
                     style="@style/text_16"
@@ -201,8 +226,9 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/y1"
-                android:background="@color/colorPrimary"></View>
+                android:layout_height="@dimen/y2"
+                android:layout_marginLeft="@dimen/x30"
+                android:background="@color/gray"></View>
 
             <LinearLayout
                 android:id="@+id/invite_Friends"
@@ -221,7 +247,7 @@
                     android:paddingLeft="30px" />
 
                 <TextView
-                    style="@style/text_14"
+                    style="@style/text_ty"
                     android:layout_width="0px"
                     android:layout_height="match_parent"
                     android:layout_weight="5"
@@ -256,7 +282,7 @@
                     android:paddingLeft="30px" />
 
                 <TextView
-                    style="@style/text_14"
+                    style="@style/text_ty"
                     android:layout_width="0px"
                     android:layout_height="match_parent"
                     android:layout_weight="5"
@@ -276,8 +302,9 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/y1"
-                android:background="@color/colorPrimary"></View>
+                android:layout_height="@dimen/y2"
+                android:layout_marginLeft="@dimen/x30"
+                android:background="@color/gray"></View>
 
             <LinearLayout
                 android:id="@+id/user_Agreement"
@@ -296,7 +323,7 @@
                     android:paddingLeft="30px" />
 
                 <TextView
-                    style="@style/text_14"
+                    style="@style/text_ty"
                     android:layout_width="0px"
                     android:layout_height="match_parent"
                     android:layout_weight="5"
@@ -315,8 +342,9 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/y1"
-                android:background="@color/colorPrimary"></View>
+                android:layout_height="@dimen/y2"
+                android:layout_marginLeft="@dimen/x30"
+                android:background="@color/gray"></View>
 
             <LinearLayout
                 android:id="@+id/about_Us"
@@ -335,7 +363,7 @@
                     android:paddingLeft="30px" />
 
                 <TextView
-                    style="@style/text_14"
+                    style="@style/text_ty"
                     android:layout_width="0px"
                     android:layout_height="match_parent"
                     android:layout_weight="5"
@@ -354,8 +382,9 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/y1"
-                android:background="@color/colorPrimary"></View>
+                android:layout_height="@dimen/y2"
+                android:layout_marginLeft="@dimen/x30"
+                android:background="@color/gray"></View>
 
             <LinearLayout
                 android:id="@+id/call_Center"
@@ -374,7 +403,7 @@
                     android:paddingLeft="30px" />
 
                 <TextView
-                    style="@style/text_14"
+                    style="@style/text_ty"
                     android:layout_width="0px"
                     android:layout_height="match_parent"
                     android:layout_weight="5"
@@ -396,14 +425,13 @@
                 style="@style/text_16"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/y100"
-                android:layout_marginBottom="@dimen/y30"
+                android:layout_marginBottom="@dimen/y20"
                 android:layout_marginTop="@dimen/y30"
-                android:layout_weight="5"
                 android:background="@color/white"
                 android:gravity="center"
                 android:paddingLeft="30px"
                 android:text="退出登录"
-                android:textColor="@color/blanktitle" />
+                android:textColor="@color/red" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

@@ -7,7 +7,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/y100"
-        android:background="@color/white">
+        android:background="@color/colorTheme">
 
         <TextView
             android:id="@+id/tv_back"
@@ -18,33 +18,15 @@
             android:background="@drawable/left_jiantou" />
 
         <TextView
-            style="@style/text_18"
+            style="@style/text_title"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_centerInParent="true"
-            android:text="我的常用路线" />
+            android:text="收费标准—西安" />
     </RelativeLayout>
 
-    <ListView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0px"
-        android:layout_weight="1"></ListView>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/y100"
-        android:background="@color/confirm">
-
-        <TextView
-            android:id="@+id/tv_add_route"
-            style="@style/text_18"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_centerInParent="true"
-            android:drawableLeft="@drawable/add_icon"
-            android:text="添加一个新路线"
-            android:textColor="@color/white" />
-
-    </RelativeLayout>
-
+        android:layout_height="match_parent"
+        android:background="@drawable/feescale"></LinearLayout>
 </LinearLayout>

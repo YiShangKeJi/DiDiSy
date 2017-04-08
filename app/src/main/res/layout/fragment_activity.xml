@@ -3,4 +3,9 @@
     style="@style/fit_windows"
     android:background="@color/white">
 
+    <TextView
+        style="@style/text_18"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="暂时没有优惠活动"/>
 </LinearLayout>

@@ -10,38 +10,29 @@ import android.widget.TextView;
 import com.ys.didisy.R;
 
 /**
- * 选择常用路线
+ * 客服中心
  */
-public class ChooseRouteDialog implements OnClickListener {
+public class CallCenterDialog implements OnClickListener {
     private Context context;
     private Dialog dialog;
     private TextView tv_back;
-    private TextView tv_add_route;
-    private TextView tv_manager;
-    private AddRouteDialog addRouteDialog;
-    private ManageRouteDialog manageRouteDialog;
 
 
-    public ChooseRouteDialog(Context context) {
+    public CallCenterDialog(Context context) {
         this.context = context;
         initView();
         initData();
     }
 
     private void initData() {
-        addRouteDialog = new AddRouteDialog(context);
-        manageRouteDialog = new ManageRouteDialog(context);
+
     }
 
     private void initView() {
-        dialog = BaseDialog.getIntence(context).getDialog(R.layout.dialog_choose_route,
+        dialog = BaseDialog.getIntence(context).getDialog(R.layout.dialog_call_center,
                 LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
         tv_back = (TextView) dialog.findViewById(R.id.tv_back);
-        tv_add_route = (TextView) dialog.findViewById(R.id.tv_add_route);
-        tv_manager = (TextView) dialog.findViewById(R.id.tv_manager);
-        tv_manager.setOnClickListener(this);
         tv_back.setOnClickListener(this);
-        tv_add_route.setOnClickListener(this);
     }
 
     public void showDialog() {
@@ -53,12 +44,6 @@ public class ChooseRouteDialog implements OnClickListener {
         switch (v.getId()) {
             case R.id.tv_back:
                 dialog.dismiss();
-                break;
-            case R.id.tv_add_route:
-                addRouteDialog.showDialog();
-                break;
-            case R.id.tv_manager:
-                manageRouteDialog.showDialog();
                 break;
             default:
                 break;

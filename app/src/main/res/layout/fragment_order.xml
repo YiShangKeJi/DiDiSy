@@ -25,8 +25,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_toRightOf="@+id/textView2"
-            android:drawableRight="@drawable/right_jiantou"
-            android:paddingRight="@dimen/x30"
             android:text="附近有100辆货车可提供服务" />
     </RelativeLayout>
 
