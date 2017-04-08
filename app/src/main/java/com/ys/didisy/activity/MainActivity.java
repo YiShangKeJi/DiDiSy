@@ -44,7 +44,7 @@ import java.util.List;
 /**
  * Created by Administrator on 2017/img3/6.
  */
-public class MainActivity extends BaseFragmentActivity implements OnCheckedChangeListener {
+public class MainActivity extends BaseFragmentActivity implements OnCheckedChangeListener,View.OnClickListener {
     private OrderFragment orderFragment;
     private ManageFragment manageFragment;
     private ActivityFragment activityFragment;
@@ -60,6 +60,7 @@ public class MainActivity extends BaseFragmentActivity implements OnCheckedChang
     private FormerCircleImageView useerImage;
     private ImageView my_on;
     private FormerCircleImageView menu_userImage;
+    private LinearLayout my_Route,invite_Friends,fee_Scale,user_Agreement,about_Us,call_Center;
     private Bitmap photodata;
     private String path;
     @Override
@@ -84,7 +85,52 @@ public class MainActivity extends BaseFragmentActivity implements OnCheckedChang
     }
    private void initViewMenu(){
        menu_userImage  = (FormerCircleImageView)findViewById(R.id.imgUser);
+       my_Route = (LinearLayout) findViewById(R.id.my_Route);
+       invite_Friends = (LinearLayout) findViewById(R.id.invite_Friends);
+       fee_Scale = (LinearLayout) findViewById(R.id.fee_Scale);
+       user_Agreement = (LinearLayout) findViewById(R.id.user_Agreement);
+       about_Us = (LinearLayout) findViewById(R.id.about_Us);
+       call_Center = (LinearLayout) findViewById(R.id.call_Center);
+       menu_userImage.setOnClickListener(this);
+       my_Route.setOnClickListener(this);
+       invite_Friends.setOnClickListener(this);
+       fee_Scale.setOnClickListener(this);
+       user_Agreement.setOnClickListener(this);
+       about_Us.setOnClickListener(this);
+       call_Center.setOnClickListener(this);
+
+
    }
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.imgUser:
+                setUserImage();
+                break;
+            case R.id.my_Route:
+                startActivity(new Intent(MainActivity.this,MyRouteActivity.class));
+                break;
+            case R.id.invite_Friends:
+                startActivity(new Intent(MainActivity.this,InviteFriendsActivity.class));
+                break;
+            case R.id.fee_Scale:
+                startActivity(new Intent(MainActivity.this,FeeScaleActivity.class));
+                break;
+            case R.id.user_Agreement:
+                startActivity(new Intent(MainActivity.this,UserAgreementActivity.class));
+                break;
+            case R.id.about_Us:
+                startActivity(new Intent(MainActivity.this,AboutUsActivity.class));
+                break;
+            case R.id.call_Center:
+                startActivity(new Intent(MainActivity.this,CallCenterActivity.class));
+                break;
+            default:
+                break;
+
+        }
+
+    }
     /**
      * 逻辑处理
      */
@@ -146,70 +192,66 @@ public class MainActivity extends BaseFragmentActivity implements OnCheckedChang
 
             }
         });
+    }
+    int selected;
+    public void setUserImage(){
+        String[] str = { "拍照", "从手机相册选择" };
+        new AlertDialog.Builder(MainActivity.this, R.style.MyDialog)
+                .setTitle("请选择")
+                .setSingleChoiceItems(str, selected,
+                        new DialogInterface.OnClickListener() {
 
-        menu_userImage.setOnClickListener(new View.OnClickListener() {
-            private int selected;
-            @Override
-            public void onClick(View v) {
-                String[] str = { "拍照", "从手机相册选择" };
-                new AlertDialog.Builder(MainActivity.this, R.style.MyDialog)
-                        .setTitle("请选择")
-                        .setSingleChoiceItems(str, selected,
-                                new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog,
+                                                int which) {
+                                selected = which;
+                                switch (which) {
+                                    case 0:
+                                        // 拍照
+                                        // 销毁图片
+                                        destoryBitmap();
+                                        // 判断sd卡是否存在
+                                        String state = Environment
+                                                .getExternalStorageState();
+                                        if (state
+                                                .equals(Environment.MEDIA_MOUNTED)) {
+                                            // 打开指定的照相机
+                                            Intent intentPhoto = new Intent(
+                                                    "android.media.action.IMAGE_CAPTURE");
+                                            // 获取所拍照片存取的路径
+                                            Uri uriPhoto = savePhoto();
+                                            // 设置系统相机拍摄照片完成后图片文件的存放地址
+                                            intentPhoto
+                                                    .putExtra(
+                                                            MediaStore.EXTRA_OUTPUT,
+                                                            uriPhoto);
+                                            startActivityForResult(
+                                                    intentPhoto, 2);
 
-                                    @Override
-                                    public void onClick(DialogInterface dialog,
-                                                        int which) {
-                                        selected = which;
-                                        switch (which) {
-                                            case 0:
-                                                // 拍照
-                                                // 销毁图片
-                                                destoryBitmap();
-                                                // 判断sd卡是否存在
-                                                String state = Environment
-                                                        .getExternalStorageState();
-                                                if (state
-                                                        .equals(Environment.MEDIA_MOUNTED)) {
-                                                    // 打开指定的照相机
-                                                    Intent intentPhoto = new Intent(
-                                                            "android.media.action.IMAGE_CAPTURE");
-                                                    // 获取所拍照片存取的路径
-                                                    Uri uriPhoto = savePhoto();
-                                                    // 设置系统相机拍摄照片完成后图片文件的存放地址
-                                                    intentPhoto
-                                                            .putExtra(
-                                                                    MediaStore.EXTRA_OUTPUT,
-                                                                    uriPhoto);
-                                                    startActivityForResult(
-                                                            intentPhoto, 2);
-
-                                                } else {
-                                                    Toast.makeText(
-                                                            MainActivity.this,
-                                                            "SD卡不存在",
-                                                            Toast.LENGTH_LONG)
-                                                            .show();
-                                                }
-                                                break;
-                                            case 1:
-                                                // 本地图片
-                                                destoryBitmap();
-                                                Intent intentPic = new Intent(
-                                                        Intent.ACTION_GET_CONTENT);
-                                                intentPic.setType("image/*");
-                                                startActivityForResult(intentPic, 1);
-                                                break;
-
-                                            default:
-                                                break;
+                                        } else {
+                                            Toast.makeText(
+                                                    MainActivity.this,
+                                                    "SD卡不存在",
+                                                    Toast.LENGTH_LONG)
+                                                    .show();
                                         }
-                                        dialog.dismiss();
-                                    }
-                                }).create().show();
+                                        break;
+                                    case 1:
+                                        // 本地图片
+                                        destoryBitmap();
+                                        Intent intentPic = new Intent(
+                                                Intent.ACTION_GET_CONTENT);
+                                        intentPic.setType("image/*");
+                                        startActivityForResult(intentPic, 1);
+                                        break;
 
-            }
-        });
+                                    default:
+                                        break;
+                                }
+                                dialog.dismiss();
+                            }
+                        }).create().show();
+
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

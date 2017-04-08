@@ -164,6 +164,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/my_Route"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/y100"
                 android:layout_marginTop="@dimen/y20"
@@ -204,6 +205,7 @@
                 android:background="@color/colorPrimary"></View>
 
             <LinearLayout
+                android:id="@+id/invite_Friends"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/y100"
                 android:background="@color/white"
@@ -237,6 +239,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/fee_Scale"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/y100"
                 android:layout_marginTop="@dimen/y20"
@@ -277,6 +280,7 @@
                 android:background="@color/colorPrimary"></View>
 
             <LinearLayout
+                android:id="@+id/user_Agreement"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/y100"
                 android:background="@color/white"
@@ -315,6 +319,7 @@
                 android:background="@color/colorPrimary"></View>
 
             <LinearLayout
+                android:id="@+id/about_Us"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/y100"
                 android:background="@color/white"
@@ -353,6 +358,7 @@
                 android:background="@color/colorPrimary"></View>
 
             <LinearLayout
+                android:id="@+id/call_Center"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/y100"
                 android:background="@color/white"

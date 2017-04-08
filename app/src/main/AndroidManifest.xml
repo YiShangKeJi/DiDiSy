@@ -12,7 +12,7 @@
 
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
-            android:value="0CMiY4cHQDNIqmhYrpAMWwLs3Y2KYavD" />
+            android:value="c2fM1tkDlAl6GF1tUid4L1sfkVXTd21A" />
 
         <activity android:name="com.ys.didisy.activity.StartActivity">
             <intent-filter>
@@ -26,6 +26,14 @@
         <activity android:name="com.ys.didisy.activity.MainActivity"></activity>
         <activity android:name="com.ys.didisy.activity.MapActivity"></activity>
         <activity android:name="com.ys.didisy.activity.OrderInfoActivity"></activity>
+
+        <activity android:name="com.ys.didisy.activity.MyRouteActivity"></activity>
+        <activity android:name="com.ys.didisy.activity.InviteFriendsActivity"></activity>
+        <activity android:name="com.ys.didisy.activity.FeeScaleActivity"></activity>
+        <activity android:name="com.ys.didisy.activity.UserAgreementActivity"></activity>
+        <activity android:name="com.ys.didisy.activity.AboutUsActivity"></activity>
+        <activity android:name="com.ys.didisy.activity.CallCenterActivity"></activity>
+
     </application>
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
