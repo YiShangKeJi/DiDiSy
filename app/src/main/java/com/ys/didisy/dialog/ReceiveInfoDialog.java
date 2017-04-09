@@ -4,6 +4,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.RelativeLayout;
 import android.widget.RelativeLayout.LayoutParams;
 import android.widget.TextView;
 
@@ -15,7 +16,7 @@ import com.ys.didisy.R;
 public class ReceiveInfoDialog implements OnClickListener {
     private Context context;
     private Dialog dialog;
-    private TextView tv_back;
+    private RelativeLayout rl_back;
 
 
     public ReceiveInfoDialog(Context context) {
@@ -26,8 +27,8 @@ public class ReceiveInfoDialog implements OnClickListener {
     private void initView() {
         dialog = BaseDialog.getIntence(context).getDialog(R.layout.dialog_receive_info,
                 LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
-        tv_back = (TextView) dialog.findViewById(R.id.tv_back);
-        tv_back.setOnClickListener(this);
+        rl_back = (RelativeLayout) dialog.findViewById(R.id.rl_back);
+        rl_back.setOnClickListener(this);
     }
 
     public void showDialog() {
@@ -37,7 +38,7 @@ public class ReceiveInfoDialog implements OnClickListener {
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.tv_back:
+            case R.id.rl_back:
                 dialog.dismiss();
                 break;
             default:

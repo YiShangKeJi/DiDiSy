@@ -6,16 +6,23 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/y100"
+        android:layout_height="@dimen/y110"
         android:background="@color/colorTheme">
 
-        <TextView
-            android:id="@+id/tv_back"
-            style="@style/text_ty"
-            android:layout_width="@dimen/y100"
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="@dimen/x100"
             android:layout_height="match_parent"
-            android:layout_centerVertical="true"
-            android:background="@drawable/left_jiantou" />
+            android:layout_marginLeft="@dimen/x10">
+
+            <TextView
+                style="@style/text_ty"
+                android:layout_width="@dimen/x25"
+                android:layout_height="@dimen/y40"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x20"
+                android:background="@drawable/img_23" />
+        </RelativeLayout>
 
         <TextView
             android:id="@+id/tv_rote"
@@ -43,13 +50,10 @@
         android:orientation="horizontal">
 
         <TextView
-            style="@style/text_16"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginLeft="@dimen/x20"
-            android:background="@drawable/my_on"
-            android:gravity="center_vertical"
-            android:paddingLeft="30px" />
+            android:layout_width="@dimen/x40"
+            android:layout_height="@dimen/x40"
+            android:layout_marginLeft="@dimen/x30"
+            android:background="@drawable/img_24" />
 
         <TextView
             style="@style/text_ty"
@@ -57,15 +61,14 @@
             android:layout_height="match_parent"
             android:layout_weight="5"
             android:gravity="center_vertical"
-            android:paddingLeft="30px"
+            android:paddingLeft="@dimen/x30"
             android:text="桃花潭" />
 
         <TextView
-            style="@style/text_16"
             android:layout_width="@dimen/x20"
             android:layout_height="@dimen/x30"
             android:layout_gravity="center"
-            android:layout_marginRight="30px"
+            android:layout_marginRight="@dimen/x30"
             android:background="@drawable/right_jiantou" />
     </LinearLayout>
 
@@ -77,13 +80,10 @@
         android:orientation="horizontal">
 
         <TextView
-            style="@style/text_16"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginLeft="@dimen/x20"
-            android:background="@drawable/my_on"
-            android:gravity="center_vertical"
-            android:paddingLeft="30px" />
+            android:layout_width="@dimen/x40"
+            android:layout_height="@dimen/x40"
+            android:layout_marginLeft="@dimen/x30"
+            android:background="@drawable/img_25" />
 
         <TextView
             style="@style/text_ty"
@@ -92,14 +92,13 @@
             android:layout_weight="5"
             android:gravity="center_vertical"
             android:hint="请填写详细信息（可不填）"
-            android:paddingLeft="30px" />
+            android:paddingLeft="@dimen/x30" />
 
         <TextView
-            style="@style/text_16"
             android:layout_width="@dimen/x20"
             android:layout_height="@dimen/x30"
             android:layout_gravity="center"
-            android:layout_marginRight="30px"
+            android:layout_marginRight="@dimen/x30"
             android:background="@drawable/right_jiantou" />
     </LinearLayout>
 
@@ -111,13 +110,10 @@
         android:orientation="horizontal">
 
         <TextView
-            style="@style/text_16"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginLeft="@dimen/x20"
-            android:background="@drawable/my_on"
-            android:gravity="center_vertical"
-            android:paddingLeft="30px" />
+            android:layout_width="@dimen/x40"
+            android:layout_height="@dimen/x40"
+            android:layout_marginLeft="@dimen/x30"
+            android:background="@drawable/img_14" />
 
         <TextView
             style="@style/text_ty"
@@ -126,14 +122,13 @@
             android:layout_weight="5"
             android:gravity="center_vertical"
             android:hint="请输入发货人姓名（可不填）"
-            android:paddingLeft="30px" />
+            android:paddingLeft="@dimen/x30" />
 
         <TextView
-            style="@style/text_16"
             android:layout_width="@dimen/x20"
             android:layout_height="@dimen/x30"
             android:layout_gravity="center"
-            android:layout_marginRight="30px"
+            android:layout_marginRight="@dimen/x30"
             android:background="@drawable/right_jiantou" />
     </LinearLayout>
 
@@ -145,13 +140,10 @@
         android:orientation="horizontal">
 
         <TextView
-            style="@style/text_16"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginLeft="@dimen/x20"
-            android:background="@drawable/my_on"
-            android:gravity="center_vertical"
-            android:paddingLeft="30px" />
+            android:layout_width="@dimen/x40"
+            android:layout_height="@dimen/y40"
+            android:layout_marginLeft="@dimen/x30"
+            android:background="@drawable/img_15" />
 
         <TextView
             style="@style/text_ty"
@@ -159,16 +151,15 @@
             android:layout_height="match_parent"
             android:layout_weight="5"
             android:gravity="center_vertical"
-            android:paddingLeft="30px"
+            android:paddingLeft="@dimen/x30"
             android:text="桃花潭" />
 
         <TextView
             android:id="@+id/tv_signature"
-            style="@style/text_16"
             android:layout_width="@dimen/x20"
             android:layout_height="@dimen/x30"
             android:layout_gravity="center"
-            android:layout_marginRight="30px"
+            android:layout_marginRight="@dimen/x30"
             android:background="@drawable/right_jiantou" />
     </LinearLayout>
 

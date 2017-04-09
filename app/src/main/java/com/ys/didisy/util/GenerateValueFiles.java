@@ -11,7 +11,6 @@ import java.io.PrintWriter;
  */
 
 public class GenerateValueFiles {
-
     private int baseW;
     private int baseH;
 
@@ -19,7 +18,7 @@ public class GenerateValueFiles {
 
     private final static String WTemplate = "<dimen name=\"x{0}\">{1}px</dimen>\n";
     private final static String HTemplate = "<dimen name=\"y{0}\">{1}px</dimen>\n";
-    private final static String SPTemplate = "<dimen name=\"s{0}\">{1}sp</dimen>\n";
+    private final static String PXTemplate = "<dimen name=\"p{0}\">{1}px</dimen>\n";
 
     /**
      * {0}-HEIGHT
@@ -127,10 +126,10 @@ public class GenerateValueFiles {
         sp.append("<resources>");
         float cellsp = w *1.0f/ baseW;
         for (int i = 1; i < 100; i++) {
-            sp.append(SPTemplate.replace("{0}", i + "").replace("{1}",
+            sp.append(PXTemplate.replace("{0}", i + "").replace("{1}",
                     change(cellsp * i) + ""));
         }
-        sp.append(SPTemplate.replace("{0}", 100 + "").replace("{1}",
+        sp.append(PXTemplate.replace("{0}", 100 + "").replace("{1}",
                 100 + ""));
         sp.append("</resources>");
 
@@ -143,7 +142,7 @@ public class GenerateValueFiles {
 //文件名
         File layxFile = new File(fileDir.getAbsolutePath(), "lay_x.xml");
         File layyFile = new File(fileDir.getAbsolutePath(), "lay_y.xml");
-        File layspyFile = new File(fileDir.getAbsolutePath(), "lay_sp.xml");
+        File layspyFile = new File(fileDir.getAbsolutePath(), "lay_p.xml");
         try {
             PrintWriter pw = new PrintWriter(new FileOutputStream(layxFile));
             pw.print(sbForWidth.toString());
@@ -165,7 +164,7 @@ public class GenerateValueFiles {
     }
 
     public static void main(String[] args) {
-        int baseW = 768;
+        int baseW = 720;
         int baseH = 1280;
         String addition = "";
         try {

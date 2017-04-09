@@ -6,100 +6,94 @@
 
     </style>
     <!-- 自定义 TextView-->
-    <style name="text_12">
+    <style name="text_1">
         <item name="android:textColor">@color/font</item>
-        <item name="android:textSize">@dimen/s12</item>
+        <item name="android:textSize">@dimen/p20</item>
         <item name="android:gravity">center</item>
     </style>
 
-    <style name="text_14">
+    <style name="text_2">
         <item name="android:textColor">@color/font</item>
-        <item name="android:textSize">@dimen/s14</item>
+        <item name="android:textSize">@dimen/p22</item>
         <item name="android:gravity">center</item>
     </style>
 
-    <style name="text_14_black">
-        <item name="android:textColor">@color/bantouming</item>
-        <item name="android:textSize">@dimen/s14</item>
+    <style name="text_3">
+        <item name="android:textColor">@color/font</item>
+        <item name="android:textSize">@dimen/p24</item>
         <item name="android:gravity">center</item>
     </style>
 
     <style name="text_ty">
         <item name="android:textColor">@color/font</item>
-        <item name="android:textSize">@dimen/s16</item>
+        <item name="android:textSize">@dimen/p30</item>
         <item name="android:gravity">center</item>
 
     </style>
 
-    <style name="text_16">
+    <style name="text_4">
         <item name="android:textColor">@color/font</item>
-        <item name="android:textSize">@dimen/s16</item>
+        <item name="android:textSize">@dimen/p26</item>
         <item name="android:gravity">center</item>
 
     </style>
 
-    <style name="text_18">
+    <style name="text_5">
         <item name="android:textColor">@color/font</item>
-        <item name="android:textSize">@dimen/s18</item>
+        <item name="android:textSize">@dimen/p28</item>
         <item name="android:gravity">center</item>
     </style>
 
-    <style name="text_20">
+    <style name="text_6">
         <item name="android:textColor">@color/font</item>
-        <item name="android:textSize">@dimen/s20</item>
+        <item name="android:textSize">@dimen/p30</item>
         <item name="android:gravity">center</item>
     </style>
 
-    <style name="text_22">
+    <style name="text_7">
         <item name="android:textColor">@color/font</item>
-        <item name="android:textSize">@dimen/s22</item>
+        <item name="android:textSize">@dimen/p32</item>
         <item name="android:gravity">center</item>
     </style>
 
-    <style name="text_24">
+    <style name="text_8">
         <item name="android:textColor">@color/font</item>
-        <item name="android:textSize">@dimen/s24</item>
+        <item name="android:textSize">@dimen/p34</item>
         <item name="android:gravity">center</item>
     </style>
 
-    <style name="text_26">
+    <style name="text_9">
         <item name="android:textColor">@color/font</item>
-        <item name="android:textSize">@dimen/s26</item>
+        <item name="android:textSize">@dimen/p36</item>
         <item name="android:gravity">center</item>
     </style>
 
-    <style name="text_28">
+    <style name="text_10">
         <item name="android:textColor">@color/font</item>
-        <item name="android:textSize">@dimen/s28</item>
-        <item name="android:gravity">center</item>
-    </style>
-
-    <style name="text_30">
-        <item name="android:textColor">@color/font</item>
-        <item name="android:textSize">@dimen/s30</item>
+        <item name="android:textSize">@dimen/p38</item>
         <item name="android:gravity">center</item>
     </style>
 
     <style name="text_title">
         <item name="android:textColor">@color/font</item>
-        <item name="android:textSize">@dimen/s18</item>
+        <item name="android:textSize">@dimen/p34</item>
         <item name="android:gravity">center</item>
     </style>
 
     <style name="fit_windows">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
-       <!-- <item name="android:clipToPadding">true</item>
-        <item name="android:fitsSystemWindows">true</item>-->
+        <!-- <item name="android:clipToPadding">true</item>
+         <item name="android:fitsSystemWindows">true</item>-->
     </style>
 
     <style name="main_radio_button">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">match_parent</item>
-        <item name="android:layout_marginTop">@dimen/y18</item>
+        <item name="android:layout_marginTop">@dimen/y10</item>
         <item name="android:layout_weight">1</item>
         <item name="android:button">@null</item>
-        <item name="android:textSize">@dimen/s12</item>
+        <item name="android:textSize">@dimen/p22</item>
         <item name="android:gravity">center</item>
         <item name="android:textColor">@drawable/product_text</item>
     </style>
@@ -108,7 +102,7 @@
         <item name="android:layout_height">0px</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_weight">1</item>
-        <item name="android:textSize">@dimen/s12</item>
+        <item name="android:textSize">@dimen/p26</item>
         <item name="android:gravity">center_vertical</item>
         <item name="android:paddingLeft">@dimen/y30</item>
         <item name="android:textColor">@color/font</item>
@@ -131,7 +125,7 @@
     </style>
 
     <style name="Moren_touxiang">
-        <item name="android:src">@drawable/imgae_3</item>
+        <item name="android:src">@drawable/img_42</item>
     </style>
 
     <style name="MyDialog" parent="@android:style/Theme.Holo.Light.Dialog">
@@ -145,7 +139,7 @@
 
     <style name="button_ty">
         <item name="android:textColor">@color/white</item>
-        <item name="android:textSize">@dimen/s18</item>
+        <item name="android:textSize">@dimen/p32</item>
         <item name="android:gravity">center</item>
         <item name="android:background">@drawable/next_button</item>
     </style>

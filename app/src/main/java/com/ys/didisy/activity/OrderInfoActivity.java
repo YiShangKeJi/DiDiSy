@@ -3,6 +3,7 @@ package com.ys.didisy.activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.ys.didisy.R;
@@ -22,7 +23,7 @@ public class OrderInfoActivity extends BaseActivity implements View.OnClickListe
     private LinearLayout ll_extra_service;
     private LinearLayout ll_note;
 
-    private TextView tv_back;
+    private RelativeLayout rl_back;
     private TextView tv_rote;
     private TextView tv_next;
 
@@ -65,8 +66,8 @@ public class OrderInfoActivity extends BaseActivity implements View.OnClickListe
         ll_destination.setOnClickListener(this);
         ll_note = (LinearLayout) findViewById(R.id.ll_note);
         ll_note.setOnClickListener(this);
-        tv_back = (TextView) findViewById(R.id.tv_back);
-        tv_back.setOnClickListener(this);
+        rl_back = (RelativeLayout) findViewById(R.id.rl_back);
+        rl_back.setOnClickListener(this);
         tv_rote = (TextView) findViewById(R.id.tv_rote);
         tv_rote.setOnClickListener(this);
         tv_next = (TextView) findViewById(R.id.tv_next);
@@ -76,7 +77,7 @@ public class OrderInfoActivity extends BaseActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.tv_back:
+            case R.id.rl_back:
                 finish();
                 break;
             case R.id.tv_rote:

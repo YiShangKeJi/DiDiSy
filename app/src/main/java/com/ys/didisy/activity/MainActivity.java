@@ -6,12 +6,12 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
+
 import com.ys.didisy.R;
 import com.ys.didisy.adapter.TyViewPagerAdapter;
 import com.ys.didisy.constant.Constant;
 import com.ys.didisy.dialog.AboutUsDialog;
 import com.ys.didisy.dialog.CallCenterDialog;
-import com.ys.didisy.dialog.ChooseRouteDialog;
 import com.ys.didisy.dialog.FeeScaleDialog;
 import com.ys.didisy.dialog.InviteFriendDialog;
 import com.ys.didisy.dialog.ManageRouteDialog;
@@ -35,9 +35,6 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.LinearLayout;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -50,12 +47,11 @@ import java.util.List;
 /**
  * Created by Administrator on 2017/img3/6.
  */
-public class MainActivity extends BaseFragmentActivity implements OnCheckedChangeListener, View.OnClickListener {
+public class MainActivity extends BaseFragmentActivity implements View.OnClickListener {
     private OrderFragment orderFragment;
     private ManageFragment manageFragment;
     private ActivityFragment activityFragment;
     private PersonFragment personFragment;
-    private RadioGroup group;
     private SureCancelDialog sureCancelDialog;
     private ViewPager vp_manage;
     public List<Fragment> fragments = new ArrayList<Fragment>();
@@ -65,6 +61,7 @@ public class MainActivity extends BaseFragmentActivity implements OnCheckedChang
     private LinearLayout menuLayout;
     private FormerCircleImageView useerImage;
     private FormerCircleImageView menu_userImage;
+    private LinearLayout ll_order, ll_manage, ll_activity;
     private LinearLayout my_Route, invite_Friends, fee_Scale, user_Agreement, about_Us, call_Center;
     private TextView tv_sign_out;
     private Bitmap photodata;
@@ -77,7 +74,8 @@ public class MainActivity extends BaseFragmentActivity implements OnCheckedChang
     private AboutUsDialog aboutUsDialog;
     private CallCenterDialog callCenterDialog;
     private OutDialog outDialog;
-    //
+    //修改选择背景
+    private TextView iv_order, tv_order, iv_manage, tv_manage, iv_activity, tv_activity;
 
     @Override
 
@@ -102,9 +100,21 @@ public class MainActivity extends BaseFragmentActivity implements OnCheckedChang
     }
 
     private void initView() {
+        ll_order = (LinearLayout) findViewById(R.id.ll_order);
+        ll_manage = (LinearLayout) findViewById(R.id.ll_manage);
+        ll_activity = (LinearLayout) findViewById(R.id.ll_activity);
+        iv_order = (TextView) findViewById(R.id.iv_order);
+        tv_order = (TextView) findViewById(R.id.tv_order);
+        iv_manage = (TextView) findViewById(R.id.iv_manage);
+        tv_manage = (TextView) findViewById(R.id.tv_manage);
+        iv_activity = (TextView) findViewById(R.id.iv_activity);
+        tv_activity = (TextView) findViewById(R.id.tv_activity);
+        setBackGround(0);
+        ll_order.setOnClickListener(this);
+        ll_manage.setOnClickListener(this);
+        ll_activity.setOnClickListener(this);
         sureCancelDialog = new SureCancelDialog(this);//程序退出询问框
         useerImage = (FormerCircleImageView) findViewById(R.id.imageTouxiang);//用户头像
-        group = (RadioGroup) findViewById(R.id.rg_main);
         title = (TextView) findViewById(R.id.title);//标题
         activity_main = (DrawerLayout) findViewById(R.id.activity_main);
 //        activity_main.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);//侧滑手势关闭
@@ -135,6 +145,21 @@ public class MainActivity extends BaseFragmentActivity implements OnCheckedChang
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+            case R.id.ll_order:
+                setBackGround(0);
+                vp_manage.setCurrentItem(0, false);
+                title.setText("下单");
+                break;
+            case R.id.ll_manage:
+                setBackGround(1);
+                vp_manage.setCurrentItem(1, false);
+                title.setText("订单管理");
+                break;
+            case R.id.ll_activity:
+                setBackGround(2);
+                vp_manage.setCurrentItem(2, false);
+                title.setText("优惠活动");
+                break;
             case R.id.imgUser:
                 setUserImage();
                 break;
@@ -167,6 +192,29 @@ public class MainActivity extends BaseFragmentActivity implements OnCheckedChang
     }
 
     /**
+     * 修改选中背景
+     * @param position
+     */
+    private void setBackGround(int position) {
+        iv_order.setBackgroundResource(R.drawable.img_59);
+        iv_manage.setBackgroundResource(R.drawable.img_01);
+        iv_activity.setBackgroundResource(R.drawable.img_04);
+        tv_order.setTextColor(getResources().getColor(R.color.font));
+        tv_manage.setTextColor(getResources().getColor(R.color.font));
+        tv_activity.setTextColor(getResources().getColor(R.color.font));
+        if (position == 0) {
+            iv_order.setBackgroundResource(R.drawable.img_02);
+            tv_order.setTextColor(getResources().getColor(R.color.title));
+        } else if (position == 1) {
+            iv_manage.setBackgroundResource(R.drawable.img_03);
+            tv_manage.setTextColor(getResources().getColor(R.color.title));
+        } else if (position == 2) {
+            iv_activity.setBackgroundResource(R.drawable.img_05);
+            tv_activity.setTextColor(getResources().getColor(R.color.title));
+        }
+    }
+
+    /**
      * 逻辑处理
      */
     private void initLogic() {
@@ -180,7 +228,6 @@ public class MainActivity extends BaseFragmentActivity implements OnCheckedChang
             }
         });
         title.setText("下单");
-        group.setOnCheckedChangeListener(this);
         //下单
         orderFragment = new OrderFragment();
         fragments.add(orderFragment);
@@ -205,7 +252,7 @@ public class MainActivity extends BaseFragmentActivity implements OnCheckedChang
 
             @Override
             public void onPageSelected(int position) {
-                ((RadioButton) group.getChildAt(position)).setChecked(true);
+                setBackGround(position);
                 if (position == 0) {
                     title.setText("下单");
                 } else if (position == 1) {
@@ -364,33 +411,6 @@ public class MainActivity extends BaseFragmentActivity implements OnCheckedChang
         return filepath;
     }
 
-    @Override
-    public void onCheckedChanged(RadioGroup group, int id) {
-        switch (id) {
-            case R.id.rb_homepage:
-                ((RadioButton) group.getChildAt(0)).setChecked(true);
-                vp_manage.setCurrentItem(0, false);
-                title.setText("下单");
-                break;
-            case R.id.rb_plan:
-                ((RadioButton) group.getChildAt(1)).setChecked(true);
-                vp_manage.setCurrentItem(1, false);
-                title.setText("订单管理");
-                break;
-            case R.id.rb_friend:
-                ((RadioButton) group.getChildAt(2)).setChecked(true);
-                vp_manage.setCurrentItem(2, false);
-                title.setText("优惠活动");
-                break;
-            case R.id.rb_person:
-                ((RadioButton) group.getChildAt(3)).setChecked(true);
-                vp_manage.setCurrentItem(3, false);
-                title.setText("我的");
-                break;
-            default:
-                break;
-        }
-    }
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {

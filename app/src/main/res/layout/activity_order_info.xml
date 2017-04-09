@@ -6,16 +6,23 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/y100"
+        android:layout_height="@dimen/y110"
         android:background="@color/colorTheme">
 
-        <TextView
-            android:id="@+id/tv_back"
-            style="@style/text_ty"
-            android:layout_width="@dimen/y100"
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="@dimen/x100"
             android:layout_height="match_parent"
-            android:layout_centerVertical="true"
-            android:background="@drawable/left_jiantou" />
+            android:layout_marginLeft="@dimen/x10">
+
+            <TextView
+                style="@style/text_ty"
+                android:layout_width="@dimen/x25"
+                android:layout_height="@dimen/y40"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x20"
+                android:background="@drawable/img_23" />
+        </RelativeLayout>
 
         <TextView
             android:id="@+id/tv_rote"
@@ -28,7 +35,7 @@
             android:text="常用路线" />
 
         <TextView
-            style="@style/text_18"
+            style="@style/text_title"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_centerInParent="true"
@@ -55,12 +62,11 @@
 
                 <TextView
                     style="@style/text_ty"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_marginLeft="@dimen/x20"
-                    android:background="@drawable/my_on"
-                    android:gravity="center_vertical"
-                    android:paddingLeft="30px" />
+                    android:layout_width="@dimen/x40"
+                    android:layout_height="@dimen/x40"
+                    android:layout_marginLeft="@dimen/x30"
+                    android:background="@drawable/img_13"
+                    android:gravity="center_vertical" />
 
                 <TextView
                     style="@style/text_ty"
@@ -110,12 +116,11 @@
 
                 <TextView
                     style="@style/text_ty"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
+                    android:layout_width="@dimen/x40"
+                    android:layout_height="@dimen/y55"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="@dimen/x20"
-                    android:background="@drawable/my_on"
-                    android:paddingLeft="30px" />
+                    android:layout_marginLeft="@dimen/x30"
+                    android:background="@drawable/img_18" />
 
                 <LinearLayout
                     android:layout_width="0px"
@@ -162,12 +167,11 @@
 
                 <TextView
                     style="@style/text_ty"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_marginLeft="@dimen/x20"
-                    android:background="@drawable/my_on"
-                    android:gravity="center_vertical"
-                    android:paddingLeft="30px" />
+                    android:layout_width="@dimen/x40"
+                    android:layout_height="@dimen/y55"
+                    android:layout_marginLeft="@dimen/x30"
+                    android:background="@drawable/img_27"
+                    android:gravity="center_vertical" />
 
                 <TextView
                     style="@style/text_ty"
@@ -199,15 +203,21 @@
                 <TextView
                     style="@style/text_ty"
                     android:layout_width="wrap_content"
+                    android:layout_height="@dimen/y40"
+                    android:layout_marginLeft="@dimen/x30"
+                    android:background="@drawable/img_16" />
+
+                <TextView
+                    style="@style/text_ty"
+                    android:layout_width="wrap_content"
                     android:layout_height="@dimen/y70"
                     android:layout_marginLeft="@dimen/x30"
-                    android:background="@drawable/rectangle"
                     android:paddingLeft="30px"
                     android:paddingRight="@dimen/x30"
                     android:text="添加目的地" />
 
                 <TextView
-                    style="@style/text_12"
+                    style="@style/text_4"
                     android:layout_width="wrap_content"
                     android:layout_height="@dimen/y70"
                     android:gravity="center_vertical"
@@ -225,12 +235,11 @@
 
                 <TextView
                     style="@style/text_ty"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_marginLeft="@dimen/x20"
-                    android:background="@drawable/my_on"
-                    android:gravity="center_vertical"
-                    android:paddingLeft="30px" />
+                    android:layout_width="@dimen/x40"
+                    android:layout_height="@dimen/y40"
+                    android:layout_marginLeft="@dimen/x30"
+                    android:background="@drawable/img_21"
+                    android:gravity="center_vertical" />
 
                 <TextView
                     style="@style/text_ty"
@@ -270,12 +279,11 @@
 
                 <TextView
                     style="@style/text_ty"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_marginLeft="@dimen/x20"
-                    android:background="@drawable/feedback"
-                    android:gravity="center_vertical"
-                    android:paddingLeft="30px" />
+                    android:layout_width="@dimen/x40"
+                    android:layout_height="@dimen/y40"
+                    android:layout_marginLeft="@dimen/x30"
+                    android:background="@drawable/img_22"
+                    android:gravity="center_vertical" />
 
                 <TextView
                     style="@style/text_ty"
@@ -319,21 +327,21 @@
                     android:orientation="vertical">
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="0px"
-                        android:layout_gravity="center"
                         android:layout_weight="1"
+                        android:gravity="center"
                         android:orientation="horizontal">
 
                         <ImageView
                             android:id="@+id/iv_choose"
                             android:layout_width="@dimen/x30"
-                            android:layout_height="match_parent"
+                            android:layout_height="@dimen/x30"
                             android:layout_marginLeft="@dimen/x10"
-                            android:src="@drawable/choose_on" />
+                            android:src="@drawable/img_20" />
 
                         <TextView
-                            style="@style/text_14"
+                            style="@style/text_4"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="@dimen/x10"
@@ -346,18 +354,18 @@
                         android:layout_height="0px"
                         android:layout_gravity="center"
                         android:layout_weight="1"
+                        android:gravity="center"
                         android:orientation="horizontal">
 
                         <TextView
-                            style="@style/text_14"
-                            android:layout_width="0px"
+                            style="@style/text_4"
+                            android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:layout_weight="1"
                             android:text="约"
                             android:textColor="@color/red" />
 
                         <TextView
-                            style="@style/text_30"
+                            style="@style/text_10"
                             android:layout_width="0px"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="@dimen/x20"
@@ -366,9 +374,9 @@
                             android:text="54.5" />
 
                         <ImageView
-                            android:layout_width="@dimen/x20"
-                            android:layout_height="match_parent"
-                            android:src="@drawable/right_jiantou" />
+                            android:layout_width="@dimen/x25"
+                            android:layout_height="@dimen/y25"
+                            android:src="@drawable/img_60" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -386,21 +394,20 @@
                     android:orientation="vertical">
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="0px"
-                        android:layout_gravity="center"
                         android:layout_weight="1"
+                        android:gravity="center"
                         android:orientation="horizontal">
 
                         <ImageView
-                            android:id="@+id/iv_system_choose"
                             android:layout_width="@dimen/x30"
-                            android:layout_height="match_parent"
+                            android:layout_height="@dimen/x30"
                             android:layout_marginLeft="@dimen/x10"
-                            android:src="@drawable/choose_off" />
+                            android:src="@drawable/img_19" />
 
                         <TextView
-                            style="@style/text_14"
+                            style="@style/text_4"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="@dimen/x10"
@@ -412,17 +419,17 @@
                         android:layout_height="0px"
                         android:layout_gravity="center"
                         android:layout_weight="1"
+                        android:gravity="center"
                         android:orientation="horizontal">
 
                         <TextView
-                            style="@style/text_14"
-                            android:layout_width="0px"
+                            style="@style/text_4"
+                            android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:layout_weight="1"
                             android:text="约" />
 
                         <TextView
-                            style="@style/text_30"
+                            style="@style/text_10"
                             android:layout_width="0px"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="@dimen/x20"
@@ -431,13 +438,11 @@
                             android:text="54.5" />
 
                         <ImageView
-                            android:layout_width="@dimen/x20"
-                            android:layout_height="match_parent"
+                            android:layout_width="@dimen/x25"
+                            android:layout_height="@dimen/y25"
                             android:src="@drawable/right_jiantou" />
                     </LinearLayout>
                 </LinearLayout>
-
-
             </LinearLayout>
 
             <View
@@ -453,14 +458,14 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    style="@style/text_12"
+                    style="@style/text_4"
                     android:layout_width="wrap_content"
                     android:layout_height="@dimen/y80"
                     android:background="@color/white"
                     android:text="已经减免" />
 
                 <TextView
-                    style="@style/text_12"
+                    style="@style/text_4"
                     android:layout_width="wrap_content"
                     android:layout_height="@dimen/y80"
                     android:background="@color/white"
@@ -468,7 +473,7 @@
                     android:textColor="@color/red" />
 
                 <TextView
-                    style="@style/text_12"
+                    style="@style/text_4"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:background="@color/white"

@@ -11,7 +11,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/y100"
+            android:layout_height="@dimen/y110"
             android:background="@color/colorTheme">
 
             <com.ys.didisy.widget.FormerCircleImageView
@@ -50,41 +50,87 @@
             android:layout_height="@dimen/y2"
             android:background="@color/gray"></View>
 
-        <RadioGroup
+        <LinearLayout
             android:id="@+id/rg_main"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/y115"
+            android:layout_height="@dimen/y120"
             android:layout_alignParentBottom="true"
             android:background="@color/colorTheme"
             android:orientation="horizontal">
 
-            <RadioButton
-                android:id="@+id/rb_homepage"
-                style="@style/main_radio_button"
-                android:checked="true"
-                android:drawableTop="@drawable/homepage"
-                android:text="下单" />
-
-            <RadioButton
-                android:id="@+id/rb_plan"
-                style="@style/main_radio_button"
-                android:drawableTop="@drawable/plan"
-                android:text="订单管理" />
-
-            <RadioButton
-                android:id="@+id/rb_friend"
-                style="@style/main_radio_button"
-                android:drawableTop="@drawable/more"
-                android:text="优惠活动" />
-
-            <RadioButton
-                android:id="@+id/rb_person"
-                style="@style/main_radio_button"
-                android:drawableTop="@drawable/my"
+            <LinearLayout
+                android:id="@+id/ll_order"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:gravity="center"
-                android:text="我的"
-                android:visibility="gone" />
-        </RadioGroup>
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/iv_order"
+                    android:layout_width="@dimen/x50"
+                    android:layout_height="@dimen/y45"
+                    android:layout_marginTop="@dimen/y18"
+                    android:background="@drawable/img_02" />
+
+                <TextView
+                    android:id="@+id/tv_order"
+                    style="@style/text_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1"
+                    android:text="下单" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_manage"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/iv_manage"
+                    android:layout_width="@dimen/x40"
+                    android:layout_height="@dimen/y45"
+                    android:layout_marginTop="@dimen/y18"
+                    android:background="@drawable/img_01" />
+
+                <TextView
+                    android:id="@+id/tv_manage"
+                    style="@style/text_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1"
+                    android:text="订单管理" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_activity"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/iv_activity"
+                    android:layout_width="@dimen/x40"
+                    android:layout_height="@dimen/y45"
+                    android:layout_marginTop="@dimen/y18"
+                    android:background="@drawable/img_04" />
+
+                <TextView
+                    android:id="@+id/tv_activity"
+                    style="@style/text_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1"
+                    android:text="优惠活动" />
+            </LinearLayout>
+
+        </LinearLayout>
     </LinearLayout>
 
     <include layout="@layout/fragment_person" />

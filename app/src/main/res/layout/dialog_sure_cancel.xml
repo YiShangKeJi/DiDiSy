@@ -28,7 +28,7 @@
             android:layout_alignParentRight="true"
             android:layout_below="@+id/tv_dialog_info"
             android:layout_margin="@dimen/x40"
-            android:background="@drawable/rectangle"
+            android:background="@drawable/circle"
             android:text="取消" />
 
         <Button
@@ -38,7 +38,7 @@
             android:layout_height="@dimen/y80"
             android:layout_below="@+id/tv_dialog_info"
             android:layout_margin="@dimen/x40"
-            android:background="@drawable/rectangle"
+            android:background="@drawable/circle"
             android:text="确定" />
 
         <View

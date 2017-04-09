@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/fragment_person"
-    android:layout_width="@dimen/x600"
+    android:layout_width="@dimen/x550"
     android:layout_height="match_parent"
     android:layout_gravity="start"
     android:background="@color/gray"
@@ -56,7 +56,7 @@
 
                 <TextView
                     android:id="@+id/tv_balance"
-                    style="@style/text_20"
+                    style="@style/text_10"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:gravity="bottom"
@@ -65,7 +65,7 @@
                     android:textColor="@color/red" />
 
                 <TextView
-                    style="@style/text_12"
+                    style="@style/text_2"
                     android:layout_width="wrap_content"
                     android:layout_height="@dimen/y50"
                     android:layout_toRightOf="@+id/tv_balance"
@@ -74,7 +74,7 @@
             </RelativeLayout>
 
             <TextView
-                style="@style/text_12"
+                style="@style/text_2"
                 android:layout_width="match_parent"
                 android:layout_height="0px"
                 android:layout_weight="1"
@@ -102,7 +102,7 @@
 
                 <TextView
                     android:id="@+id/tv_coupon"
-                    style="@style/text_20"
+                    style="@style/text_10"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:gravity="bottom"
@@ -111,7 +111,7 @@
                     android:textColor="@color/red" />
 
                 <TextView
-                    style="@style/text_12"
+                    style="@style/text_2"
                     android:layout_width="wrap_content"
                     android:layout_height="@dimen/y50"
                     android:layout_toRightOf="@+id/tv_coupon"
@@ -120,7 +120,7 @@
             </RelativeLayout>
 
             <TextView
-                style="@style/text_12"
+                style="@style/text_2"
                 android:layout_width="match_parent"
                 android:layout_height="0px"
                 android:layout_weight="1"
@@ -148,7 +148,7 @@
 
                 <TextView
                     android:id="@+id/tv_integral"
-                    style="@style/text_20"
+                    style="@style/text_10"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:gravity="bottom"
@@ -157,7 +157,7 @@
                     android:textColor="@color/red" />
 
                 <TextView
-                    style="@style/text_12"
+                    style="@style/text_2"
                     android:layout_width="wrap_content"
                     android:layout_height="@dimen/y50"
                     android:layout_toRightOf="@+id/tv_integral"
@@ -167,7 +167,7 @@
 
             <TextView
                 android:id="@+id/textView4"
-                style="@style/text_12"
+                style="@style/text_2"
                 android:layout_width="match_parent"
                 android:layout_height="0px"
                 android:layout_weight="1"
@@ -197,11 +197,10 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    style="@style/text_16"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:layout_marginLeft="@dimen/x20"
-                    android:background="@drawable/my_on"
+                    android:layout_marginLeft="@dimen/x30"
+                    android:background="@drawable/img_34"
                     android:gravity="center_vertical"
                     android:paddingLeft="30px" />
 
@@ -216,7 +215,7 @@
                     android:text="我的常用路线" />
 
                 <TextView
-                    style="@style/text_16"
+
                     android:layout_width="@dimen/x20"
                     android:layout_height="@dimen/x30"
                     android:layout_marginRight="30px"
@@ -238,11 +237,11 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    style="@style/text_16"
+
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:layout_marginLeft="@dimen/x20"
-                    android:background="@drawable/my_on"
+                    android:layout_marginLeft="@dimen/x30"
+                    android:background="@drawable/img_35"
                     android:gravity="center_vertical"
                     android:paddingLeft="30px" />
 
@@ -256,7 +255,7 @@
                     android:text="邀请好友" />
 
                 <TextView
-                    style="@style/text_16"
+
                     android:layout_width="@dimen/x20"
                     android:layout_height="@dimen/x30"
                     android:layout_marginRight="30px"
@@ -273,11 +272,11 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    style="@style/text_16"
+
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:layout_marginLeft="@dimen/x20"
-                    android:background="@drawable/my_on"
+                    android:layout_marginLeft="@dimen/x30"
+                    android:background="@drawable/img_38"
                     android:gravity="center_vertical"
                     android:paddingLeft="30px" />
 
@@ -292,7 +291,7 @@
 
                 <TextView
                     android:id="@+id/tv_signature"
-                    style="@style/text_16"
+
                     android:layout_width="@dimen/x20"
                     android:layout_height="@dimen/x30"
                     android:layout_marginRight="30px"
@@ -314,11 +313,11 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    style="@style/text_16"
+
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:layout_marginLeft="@dimen/x20"
-                    android:background="@drawable/my_on"
+                    android:layout_marginLeft="@dimen/x30"
+                    android:background="@drawable/img_39"
                     android:gravity="center_vertical"
                     android:paddingLeft="30px" />
 
@@ -332,7 +331,7 @@
                     android:text="用户协议" />
 
                 <TextView
-                    style="@style/text_16"
+
                     android:layout_width="@dimen/x20"
                     android:layout_height="@dimen/x30"
                     android:layout_marginRight="30px"
@@ -354,11 +353,11 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    style="@style/text_16"
+
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:layout_marginLeft="@dimen/x20"
-                    android:background="@drawable/my_on"
+                    android:layout_marginLeft="@dimen/x30"
+                    android:background="@drawable/img_40"
                     android:gravity="center_vertical"
                     android:paddingLeft="30px" />
 
@@ -372,7 +371,7 @@
                     android:text="关于我们" />
 
                 <TextView
-                    style="@style/text_16"
+
                     android:layout_width="@dimen/x20"
                     android:layout_height="@dimen/x30"
                     android:layout_marginRight="30px"
@@ -394,11 +393,11 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    style="@style/text_16"
+
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:layout_marginLeft="@dimen/x20"
-                    android:background="@drawable/my_on"
+                    android:layout_marginLeft="@dimen/x30"
+                    android:background="@drawable/img_41"
                     android:gravity="center_vertical"
                     android:paddingLeft="30px" />
 
@@ -412,7 +411,7 @@
                     android:text="客服中心" />
 
                 <TextView
-                    style="@style/text_16"
+
                     android:layout_width="@dimen/x20"
                     android:layout_height="@dimen/x30"
                     android:layout_marginRight="30px"
@@ -421,14 +420,13 @@
             </LinearLayout>
 
             <TextView
+                style="@style/text_ty"
                 android:id="@+id/tv_sign_out"
-                style="@style/text_16"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/y100"
                 android:layout_marginBottom="@dimen/y20"
                 android:layout_marginTop="@dimen/y30"
                 android:background="@color/white"
-                android:gravity="center"
                 android:paddingLeft="30px"
                 android:text="退出登录"
                 android:textColor="@color/red" />

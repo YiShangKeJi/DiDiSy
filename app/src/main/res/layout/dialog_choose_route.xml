@@ -1,21 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     style="@style/fit_windows"
-    android:background="@color/gray"
+    android:background="@color/white"
     android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/y100"
+        android:layout_height="@dimen/y110"
         android:background="@color/colorTheme">
 
-        <TextView
-            android:id="@+id/tv_back"
-            style="@style/text_ty"
-            android:layout_width="@dimen/y100"
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="@dimen/x100"
             android:layout_height="match_parent"
-            android:layout_centerVertical="true"
-            android:background="@drawable/left_jiantou" />
+            android:layout_marginLeft="@dimen/x10">
+
+            <TextView
+                style="@style/text_ty"
+                android:layout_width="@dimen/x25"
+                android:layout_height="@dimen/y40"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x20"
+                android:background="@drawable/img_23" />
+        </RelativeLayout>
 
         <TextView
             style="@style/text_title"
@@ -25,36 +32,65 @@
             android:text="选择常用路线" />
 
         <TextView
-            android:id="@+id/tv_manager"
+            android:id="@+id/tv_manage"
             style="@style/text_title"
-            android:layout_width="@dimen/y100"
-            android:layout_height="match_parent"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="@dimen/x10"
-            android:text="管理"
-            android:textColor="@color/red" />
-    </RelativeLayout>
-
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="0px"
-        android:layout_weight="1"></ListView>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/y100"
-        android:background="@color/confirm">
-
-        <TextView
-            android:id="@+id/tv_add_route"
-            style="@style/text_18"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_centerInParent="true"
-            android:drawableLeft="@drawable/add_icon"
-            android:text="添加一个新路线"
-            android:textColor="@color/white" />
+            android:layout_alignParentRight="true"
+            android:text="管理"
+            android:layout_marginRight="@dimen/x30"
+            android:textColor="@color/red" />
 
     </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y1"
+        android:background="@color/gray"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="@dimen/x200"
+            android:layout_height="@dimen/x200"
+            android:background="@drawable/img_43" />
+
+        <TextView
+            style="@style/text_5"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x100"
+            android:text="您还没有常用路线哦" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y1"
+        android:background="@color/gray"></View>
+
+    <LinearLayout
+        android:id="@+id/ll_add_route"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y100"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="@dimen/x40"
+            android:layout_height="@dimen/x40"
+            android:background="@drawable/img_44" />
+
+        <TextView
+            style="@style/text_8"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x100"
+            android:layout_marginLeft="@dimen/x10"
+            android:text="您还没有常用路线哦"
+            android:textColor="@color/red" />
+    </LinearLayout>
 
 </LinearLayout>

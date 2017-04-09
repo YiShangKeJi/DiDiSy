@@ -5,12 +5,27 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="@dimen/y200"
+            android:layout_height="@dimen/y200"
+            android:background="@drawable/img_36" />
 
         <TextView
             style="@style/text_ty"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="您还没有此类订单！\n\n赶紧去下单吧！" />
+            android:layout_height="@dimen/y100"
+            android:text="您还没有此类订单，快去下单吧" />
+
+        <TextView
+            style="@style/text_ty"
+            android:layout_width="@dimen/y200"
+            android:layout_height="@dimen/y200"
+            android:background="@drawable/img_37"
+            android:text="立即下单"
+            android:textColor="@color/red" />
     </LinearLayout>
 </RelativeLayout>

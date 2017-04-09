@@ -6,17 +6,23 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/y100"
+        android:layout_height="@dimen/y110"
         android:background="@color/colorTheme">
 
-        <TextView
-            android:id="@+id/tv_back"
-            style="@style/text_14"
-            android:layout_width="@dimen/y100"
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="@dimen/x100"
             android:layout_height="match_parent"
-            android:layout_centerVertical="true"
-            android:background="@drawable/left_jiantou" />
+            android:layout_marginLeft="@dimen/x10">
 
+            <TextView
+                style="@style/text_ty"
+                android:layout_width="@dimen/x25"
+                android:layout_height="@dimen/y40"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x20"
+                android:background="@drawable/img_23" />
+        </RelativeLayout>
         <TextView
             style="@style/text_title"
             android:layout_width="wrap_content"
@@ -26,7 +32,7 @@
     </RelativeLayout>
 
     <EditText
-        style="@style/text_14"
+        style="@style/text_ty"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/x30"
@@ -50,7 +56,7 @@
             android:padding="@dimen/x10">
 
             <TextView
-                style="@style/text_14"
+                style="@style/text_ty"
                 android:layout_width="0px"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="@dimen/x20"
@@ -60,7 +66,7 @@
                 android:text="生鲜蔬菜" />
 
             <TextView
-                style="@style/text_14"
+                style="@style/text_ty"
                 android:layout_width="0px"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="@dimen/x20"
@@ -70,7 +76,7 @@
                 android:text="食品" />
 
             <TextView
-                style="@style/text_14"
+                style="@style/text_ty"
                 android:layout_width="0px"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="@dimen/x20"
@@ -80,7 +86,7 @@
                 android:text="电子产品" />
 
             <TextView
-                style="@style/text_14"
+                style="@style/text_ty"
                 android:layout_width="0px"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="@dimen/x20"
@@ -98,7 +104,7 @@
             android:padding="@dimen/x10">
 
             <TextView
-                style="@style/text_14"
+                style="@style/text_ty"
                 android:layout_width="0px"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="@dimen/x20"
@@ -108,7 +114,7 @@
                 android:text="家具" />
 
             <TextView
-                style="@style/text_14"
+                style="@style/text_ty"
                 android:layout_width="0px"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="@dimen/x20"
@@ -118,7 +124,7 @@
                 android:text="服装" />
 
             <TextView
-                style="@style/text_14"
+                style="@style/text_ty"
                 android:layout_width="0px"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="@dimen/x20"
@@ -128,7 +134,7 @@
                 android:text="配件" />
 
             <TextView
-                style="@style/text_14"
+                style="@style/text_ty"
                 android:layout_width="0px"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="@dimen/x20"

@@ -5,15 +5,18 @@
     <application
         android:name="com.ys.didisy.util.AppManager"
         android:allowBackup="true"
-        android:icon="@mipmap/logo"
+        android:icon="@mipmap/logo_didisy"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
+        <!--yll-->
+        <!--  <meta-data
+              android:name="com.baidu.lbsapi.API_KEY"
+              android:value="c2fM1tkDlAl6GF1tUid4L1sfkVXTd21A" />-->
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
-            android:value="c2fM1tkDlAl6GF1tUid4L1sfkVXTd21A" />
-
+            android:value="0CMiY4cHQDNIqmhYrpAMWwLs3Y2KYavD"></meta-data>
+        <!--hyy-->
         <activity android:name="com.ys.didisy.activity.StartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
