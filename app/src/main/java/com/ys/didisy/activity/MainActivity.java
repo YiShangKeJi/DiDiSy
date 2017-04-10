@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
-
 import com.ys.didisy.R;
 import com.ys.didisy.adapter.TyViewPagerAdapter;
 import com.ys.didisy.constant.Constant;
@@ -18,14 +17,12 @@ import com.ys.didisy.dialog.ManageRouteDialog;
 import com.ys.didisy.dialog.OutDialog;
 import com.ys.didisy.dialog.SureCancelDialog;
 import com.ys.didisy.dialog.UserAgreementDialog;
-import com.ys.didisy.fragment.PersonFragment;
 import com.ys.didisy.fragment.OrderFragment;
 import com.ys.didisy.fragment.ActivityFragment;
 import com.ys.didisy.fragment.ManageFragment;
 import com.ys.didisy.util.BitmapUtil;
 import com.ys.didisy.util.MeadUtil;
 import com.ys.didisy.widget.FormerCircleImageView;
-
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
@@ -37,7 +34,6 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -51,7 +47,6 @@ public class MainActivity extends BaseFragmentActivity implements View.OnClickLi
     private OrderFragment orderFragment;
     private ManageFragment manageFragment;
     private ActivityFragment activityFragment;
-    private PersonFragment personFragment;
     private SureCancelDialog sureCancelDialog;
     private ViewPager vp_manage;
     public List<Fragment> fragments = new ArrayList<Fragment>();

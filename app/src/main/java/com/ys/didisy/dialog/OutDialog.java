@@ -14,10 +14,16 @@ public class OutDialog implements OnClickListener {
 	private Dialog dialog;
 	private Button mUpdate;
 	private Button mOut;
+	private LoginDialog loginDialog;
 
 	public OutDialog(Context context) {
 		this.context = context;
 		initView();
+		initData();
+	}
+
+	private void initData() {
+		loginDialog = new LoginDialog(context);
 	}
 
 	private void initView() {
@@ -37,9 +43,8 @@ public class OutDialog implements OnClickListener {
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.bt_update_number:
-//			Intent intent=new Intent(context, LoginActivity.class);
-//			context.startActivity(intent);
-//			dialog.dismiss();
+			dialog.dismiss();
+			loginDialog.showDialog();
 			break;
 		case R.id.bt_out:
 			AppManager.getInstance().finish();
