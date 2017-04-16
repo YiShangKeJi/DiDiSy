@@ -53,7 +53,6 @@ public class OrderFragment extends Fragment implements View.OnClickListener {
         switch (view.getId()) {
             case R.id.tv_map:
                 intent = new Intent(getActivity(), MapActivity.class);
-                startActivity(intent);
                 break;
             case R.id.ll_small:
                 intent = new Intent(getActivity(), OrderInfoActivity.class);
